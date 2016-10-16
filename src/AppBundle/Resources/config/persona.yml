@@ -1,0 +1,3 @@
+persona_index:
+    path: /user
+    defaults: { _controller: "AppBundle:User:get"}

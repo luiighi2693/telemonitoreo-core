@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - symfony@localhost" uuid="bb5dadbe-a404-4580-abf8-531170f3a12f">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>symfony.*</schema-pattern>
+      <default-schemas>symfony.*</default-schemas>
+    </data-source>
+    <data-source name="MySQL - telemonitoreo@localhost" uuid="1f0f5d4c-5047-44c3-820a-2349ab3ba601">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>telemonitoreo.*</schema-pattern>
+      <default-schemas>telemonitoreo.*</default-schemas>
+    </data-source>
+  </component>
+</project>
