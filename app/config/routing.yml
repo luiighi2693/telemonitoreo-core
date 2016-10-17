@@ -22,3 +22,7 @@ telemonitoreo_equipomedico:
 telemonitoreo_patronpatologico:
     resource: "@TelemonitoreoBundle/Resources/config/patronpatologico.yml"
     prefix: /
+
+telemonitoreo_historicos:
+    resource: "@TelemonitoreoBundle/Resources/config/historicos.yml"
+    prefix: /

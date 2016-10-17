@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2016 a las 19:16:49
+-- Tiempo de generación: 17-10-2016 a las 22:37:32
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -77,11 +77,19 @@ INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedul
 
 CREATE TABLE `historicos` (
   `id` int(11) NOT NULL,
-  `HI_nombreUsuario` varchar(100) DEFAULT NULL,
+  `HI_nombreusuario` varchar(100) DEFAULT NULL,
   `HI_accion` varchar(100) DEFAULT NULL,
   `HI_fecha` date DEFAULT NULL,
   `HI_idhistoriaclinica` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `historicos`
+--
+
+INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI_idhistoriaclinica`) VALUES
+(1, 'luighi2693', 'CREATE', '2016-10-17', 1),
+(2, 'luighi2693', 'UPDATE', '2016-10-18', 1);
 
 -- --------------------------------------------------------
 
@@ -218,7 +226,7 @@ ALTER TABLE `historiaclinica`
 -- AUTO_INCREMENT de la tabla `historicos`
 --
 ALTER TABLE `historicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `patronpatologico`
 --

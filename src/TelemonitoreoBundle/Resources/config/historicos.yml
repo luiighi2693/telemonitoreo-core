@@ -1,0 +1,3 @@
+historicos_index:
+    path: /historicos
+    defaults: { _controller: "TelemonitoreoBundle:Historicos:getAll"}

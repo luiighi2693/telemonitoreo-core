@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="MySQL - symfony@localhost" uuid="bb5dadbe-a404-4580-abf8-531170f3a12f">
-    <database-info product="MySQL" version="5.5.5-10.1.16-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
-      <extra-name-characters>#@</extra-name-characters>
-      <identifier-quote-string>`</identifier-quote-string>
-    </database-info>
-    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
-      <schema id="1" name="symfony"/>
-      <table id="2" parent="1" name="user"/>
-      <column id="3" parent="2" name="id">
-        <mandatory>1</mandatory>
-        <data-type>int(11)</data-type>
-      </column>
-      <column id="4" parent="2" name="name">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <column id="5" parent="2" name="role">
-        <mandatory>1</mandatory>
-        <data-type>varchar(255)</data-type>
-      </column>
-      <key id="6" parent="2" name="PRIMARY">
-        <columns>id</columns>
-        <primary>1</primary>
-      </key>
-    </database-model>
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
   </data-source>
   <data-source name="MySQL - telemonitoreo@localhost" uuid="1f0f5d4c-5047-44c3-820a-2349ab3ba601">
     <database-info product="MySQL" version="5.5.5-10.1.16-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
@@ -33,12 +9,12 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
       <schema id="1" name="telemonitoreo"/>
       <table id="2" parent="1" name="equipomedico"/>
       <table id="3" parent="1" name="historiaclinica"/>
       <table id="4" parent="1" name="historicos"/>
-      <table id="5" parent="1" name="patron patologico">
+      <table id="5" parent="1" name="patronpatologico">
         <comment>irregularidad en las variables medicas</comment>
       </table>
       <table id="6" parent="1" name="registro"/>
@@ -47,9 +23,9 @@
       <column id="9" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="10" parent="2" name="EM_idhistoriaclinica">
-        <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
       <column id="11" parent="2" name="EM_tipoequipo">
@@ -69,17 +45,17 @@
       </column>
       <column id="15" parent="2" name="EM_tipoconexion">
         <mandatory>1</mandatory>
-        <data-type>enum(&apos;SINCRONA&apos;, &apos;ASINCRONA&apos;)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
       <column id="16" parent="2" name="EM_ip">
         <mandatory>1</mandatory>
-        <data-type>varchar(50)</data-type>
+        <data-type>varchar(100)</data-type>
       </column>
       <column id="17" parent="2" name="EM_moduloconexion">
         <data-type>varchar(100)</data-type>
       </column>
-      <column id="18" parent="2" name="EM_conexion">
-        <data-type>varchar(100)</data-type>
+      <column id="18" parent="2" name="EM_serial">
+        <data-type>varchar(50)</data-type>
       </column>
       <index id="19" parent="2" name="equipoMedico_paciente_id_fk">
         <columns>EM_idhistoriaclinica</columns>
@@ -92,6 +68,7 @@
       <column id="21" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="22" parent="3" name="HC_codigo">
         <mandatory>1</mandatory>
@@ -111,8 +88,9 @@
       <column id="26" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
-      <column id="27" parent="4" name="HI_nombreUsuario">
+      <column id="27" parent="4" name="HI_nombreusuario">
         <data-type>varchar(100)</data-type>
       </column>
       <column id="28" parent="4" name="HI_accion">
@@ -150,6 +128,7 @@
       <column id="36" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="37" parent="5" name="PP_descripcion">
         <mandatory>1</mandatory>
@@ -160,7 +139,7 @@
         <data-type>varchar(100)</data-type>
       </column>
       <column id="39" parent="5" name="PP_tipoequipo">
-        <data-type>int(11)</data-type>
+        <data-type>varchar(50)</data-type>
       </column>
       <key id="40" parent="5" name="PRIMARY">
         <columns>id</columns>
@@ -169,6 +148,7 @@
       <column id="41" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="42" parent="6" name="RE_idequipo">
         <mandatory>1</mandatory>
@@ -224,6 +204,7 @@
       <column id="54" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="55" parent="7" name="RP_idregistro">
         <data-type>int(11)</data-type>
@@ -254,7 +235,7 @@
       </key>
       <foreign-key id="62" parent="7" name="registro_has_patronpatologico_patron patologico_id_fk">
         <columns>RP_idpatronpatologico</columns>
-        <ref-key>~.patron\u0020patologico.PRIMARY</ref-key>
+        <ref-key>~.patronpatologico.PRIMARY</ref-key>
         <cascade-update-rule>restrict</cascade-update-rule>
         <cascade-delete-rule>restrict</cascade-delete-rule>
       </foreign-key>
@@ -267,6 +248,7 @@
       <column id="64" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
       </column>
       <column id="65" parent="8" name="VV_codigo">
         <data-type>int(11)</data-type>
