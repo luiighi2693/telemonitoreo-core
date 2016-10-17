@@ -66,17 +66,24 @@ class EquipoMedico
     /**
      * @var string
      *
-     * @ORM\Column(name="ip", type="string", length=100)
+     * @ORM\Column(name="EM_ip", type="string", length=100)
      */
     private $ip;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="moduloconexion", type="string", length=100)
+     * @ORM\Column(name="EM_moduloconexion", type="string", length=100)
      */
     private $moduloconexion;
 
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="EM_serial", type="string", length=50)
+     */
+    private $serial;
 
     /**
      * Get id
@@ -279,5 +286,25 @@ class EquipoMedico
     {
         return $this->moduloconexion;
     }
+
+    /**
+     * Get serial
+     *
+     * @return string
+     */
+   public function getSerial(){
+        return $this->serial;
+   }
+
+    /**
+     * Set serial
+     *
+     * @param string $serial
+     *
+     * @return EquipoMedico
+     */
+   public function setSerial($serial){
+       $this->serial = $serial;
+   }
 }
 

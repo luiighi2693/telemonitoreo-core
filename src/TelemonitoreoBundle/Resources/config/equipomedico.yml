@@ -1,0 +1,3 @@
+equipomedico_index:
+    path: /equipomedico
+    defaults: { _controller: "TelemonitoreoBundle:EquipoMedico:getAll"}

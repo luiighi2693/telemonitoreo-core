@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2016 a las 16:58:53
+-- Tiempo de generación: 17-10-2016 a las 17:36:55
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -28,15 +28,25 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `equipomedico` (
   `id` int(11) NOT NULL,
-  `EM_idhistoriaclinica` int(11) NOT NULL,
+  `EM_idhistoriaclinica` int(11) DEFAULT NULL,
   `EM_tipoequipo` varchar(100) DEFAULT NULL,
   `EM_nombre` varchar(100) NOT NULL,
   `EM_marca` varchar(100) NOT NULL,
   `EM_modelo` varchar(100) NOT NULL,
   `EM_tipoconexion` varchar(50) NOT NULL,
   `EM_ip` varchar(100) NOT NULL,
-  `EM_moduloconexion` varchar(100) DEFAULT NULL
+  `EM_moduloconexion` varchar(100) DEFAULT NULL,
+  `EM_serial` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `equipomedico`
+--
+
+INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`) VALUES
+(1, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '4123'),
+(2, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
+(3, NULL, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125');
 
 -- --------------------------------------------------------
 
@@ -189,7 +199,7 @@ ALTER TABLE `valoresvariables`
 -- AUTO_INCREMENT de la tabla `equipomedico`
 --
 ALTER TABLE `equipomedico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
