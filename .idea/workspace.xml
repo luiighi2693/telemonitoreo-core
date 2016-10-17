@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/HistoricosRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/historicos.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/symfony-rest.iml" afterPath="$PROJECT_DIR$/.idea/symfony-rest.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/RegistroRepository.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/symfony_requirements" afterPath="$PROJECT_DIR$/bin/symfony_requirements" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="symfony-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +51,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="historicos" />
+        <option name="myItemId" value="registro" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -72,99 +62,105 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="DATABASE/1f0f5d4c-5047-44c3-820a-2349ab3ba601" pinned="false" current-in-tab="true">
+              <entry file="uml://DATABASE/1f0f5d4c-5047-44c3-820a-2349ab3ba601">
+                <provider selected="true" editor-type-id="UmlEditorProvider">
+                  <state>
+                    <ID>DATABASE</ID>
+                    <OriginalElement>1f0f5d4c-5047-44c3-820a-2349ab3ba601</OriginalElement>
+                    <nodes>
+                      <node x="0.0" y="0.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.equipomedico</node>
+                      <node x="0.0" y="697.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.valoresvariables</node>
+                      <node x="340.0" y="333.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historicos</node>
+                      <node x="310.0" y="66.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica</node>
+                      <node x="314.0" y="556.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico</node>
+                      <node x="540.0" y="344.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.patronpatologico</node>
+                      <node x="80.0" y="300.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro</node>
+                    </nodes>
+                    <notes />
+                    <edges>
+                      <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.patronpatologico">
+                        <point x="48.0" y="-48.0" />
+                        <point x="458.0" y="531.0" />
+                        <point x="620.0" y="531.0" />
+                        <point x="0.0" y="59.0" />
+                      </edge>
+                      <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica">
+                        <point x="60.0" y="-103.0" />
+                        <point x="260.0" y="275.0" />
+                        <point x="350.0" y="275.0" />
+                        <point x="-40.0" y="59.0" />
+                      </edge>
+                      <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro">
+                        <point x="-48.0" y="-48.0" />
+                        <point x="362.0" y="531.0" />
+                        <point x="200.0" y="531.0" />
+                        <point x="0.0" y="103.0" />
+                      </edge>
+                      <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historicos" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica">
+                        <point x="0.0" y="-70.0" />
+                        <point x="40.0" y="59.0" />
+                      </edge>
+                      <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.equipomedico">
+                        <point x="-60.0" y="-103.0" />
+                        <point x="0.0" y="125.0" />
+                      </edge>
+                    </edges>
+                    <settings layout="Hierarchic Group" zoom="1.3854545454545457" x="210.9790026246718" y="372.89632545931755" />
+                    <SelectedNodes />
+                    <Categories>
+                      <Category>Key columns</Category>
+                      <Category>Columns</Category>
+                    </Categories>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="symfony-rest" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59615386">
+    <splitter split-orientation="horizontal" split-proportion="0.5423957">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="EquipoMedico.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+                <state relative-caret-position="357">
+                  <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Historicos.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php">
+          <file leaf-file-name="Registro.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
+                <state relative-caret-position="204">
+                  <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="HistoricosController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
+          <file leaf-file-name="RegistroController.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="206">
-                  <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+                <state relative-caret-position="272">
+                  <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
                   <folding>
                     <element signature="e#134#184#0#PHP" expanded="true" />
-                    <element signature="e#591#623#1#PHP" expanded="true" />
-                    <element signature="e#787#819#1#PHP" expanded="true" />
-                    <element signature="e#1838#1870#1#PHP" expanded="true" />
-                    <element signature="e#2658#2690#1#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="telemonitoreo.sql" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="237">
-                  <caret line="242" column="26" selection-start-line="242" selection-start-column="26" selection-end-line="242" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="historicos.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/historicos.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="routing.yml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="303">
-                  <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PatronPatologicoController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/PatronPatologicoController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#135#185#0#PHP" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="EquipoMedicoController.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1666">
-                  <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#135#185#0#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -177,8 +173,8 @@
           <file leaf-file-name="HistoriaClinica.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/HistoriaClinica.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+                <state relative-caret-position="102">
+                  <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -187,8 +183,8 @@
           <file leaf-file-name="HistoriaClinicaController.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+                <state relative-caret-position="85">
+                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="29" />
                   <folding>
                     <element signature="e#134#184#0#PHP" expanded="true" />
                   </folding>
@@ -201,7 +197,14 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="68">
                   <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="26" />
-                  <folding />
+                  <folding>
+                    <element signature="e#6#89#0#PHP" expanded="false" />
+                    <element signature="e#123#173#0#PHP" expanded="false" />
+                    <element signature="e#557#573#1#PHP" expanded="false" />
+                    <element signature="e#885#901#1#PHP" expanded="false" />
+                    <element signature="e#1790#1806#1#PHP" expanded="false" />
+                    <element signature="e#2855#2871#1#PHP" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -242,6 +245,8 @@
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/historicos.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
       </list>
     </option>
   </component>
@@ -356,8 +361,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -534,6 +537,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -609,7 +614,8 @@
       <workItem from="1476720491836" duration="4168000" />
       <workItem from="1476730700289" duration="141000" />
       <workItem from="1476730900689" duration="1111000" />
-      <workItem from="1476732025416" duration="4220000" />
+      <workItem from="1476732025416" duration="4368000" />
+      <workItem from="1476738551619" duration="1224000" />
     </task>
     <task id="LOCAL-00001" summary="generacion de bundle telemonitoreo">
       <created>1476657854399</created>
@@ -660,34 +666,41 @@
       <option name="project" value="LOCAL" />
       <updated>1476724642862</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="entidad y controlador de historicos y cambio en la base de datos">
+      <created>1476736731371</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1476736731371</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17406000" />
+    <option name="totallyTimeSpent" value="18778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3103953" sideWeight="0.49137932" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.204236" sideWeight="0.49137932" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5030349" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10102489" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23373677" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2949527" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29459903" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5086207" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -729,7 +742,8 @@
     <MESSAGE value="controlador de equipo medico" />
     <MESSAGE value="entidad y controlador de patron patolgico" />
     <MESSAGE value="actualizacion de la base de datos" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de la base de datos" />
+    <MESSAGE value="entidad y controlador de historicos y cambio en la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="entidad y controlador de historicos y cambio en la base de datos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,20 +836,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Repository/UserRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../phpMyAdmin/sql.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1080,7 +1080,7 @@
         <state relative-caret-position="1666">
           <caret line="103" column="5" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
           <folding>
-            <element signature="e#135#185#0#PHP" expanded="true" />
+            <element signature="e#135#185#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1101,50 +1101,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/PatronPatologicoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="969">
           <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
-            <element signature="e#135#185#0#PHP" expanded="true" />
+            <element signature="e#135#185#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/1f0f5d4c-5047-44c3-820a-2349ab3ba601">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>1f0f5d4c-5047-44c3-820a-2349ab3ba601</OriginalElement>
-          <nodes>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.equipomedico</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.valoresvariables</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historicos</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.patronpatologico</node>
-            <node x="" y="">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.2030303030303031" x="699.039064692267" y="338.02482718078153" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1160,21 +1126,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/HistoriaClinica.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="false" />
+            <element signature="e#123#173#0#PHP" expanded="false" />
+            <element signature="e#557#573#1#PHP" expanded="false" />
+            <element signature="e#885#901#1#PHP" expanded="false" />
+            <element signature="e#1790#1806#1#PHP" expanded="false" />
+            <element signature="e#2855#2871#1#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="527">
           <caret line="31" column="18" selection-start-line="31" selection-start-column="18" selection-end-line="31" selection-end-column="18" />
           <folding />
         </state>
@@ -1184,7 +1149,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,7 +1162,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
+        <state relative-caret-position="459">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding />
         </state>
@@ -1216,7 +1180,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1225,13 +1188,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+        <state relative-caret-position="1292">
+          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
           <folding>
-            <element signature="e#134#184#0#PHP" expanded="true" />
+            <element signature="e#134#184#0#PHP" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3621">
+          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1246,7 +1217,60 @@
           </nodes>
           <notes />
           <edges />
-          <settings layout="Hierarchic Group" zoom="1.8000000000000003" x="75.83333333333331" y="236.07638888888889" />
+          <settings layout="Hierarchic Group" zoom="0.1" x="-411.0" y="1020.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Columns</Category>
+            <Category>Key columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/1f0f5d4c-5047-44c3-820a-2349ab3ba601">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>1f0f5d4c-5047-44c3-820a-2349ab3ba601</OriginalElement>
+          <nodes>
+            <node x="0.0" y="0.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.equipomedico</node>
+            <node x="0.0" y="697.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.valoresvariables</node>
+            <node x="340.0" y="333.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historicos</node>
+            <node x="310.0" y="66.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica</node>
+            <node x="314.0" y="556.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico</node>
+            <node x="540.0" y="344.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.patronpatologico</node>
+            <node x="80.0" y="300.0">1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.patronpatologico">
+              <point x="48.0" y="-48.0" />
+              <point x="458.0" y="531.0" />
+              <point x="620.0" y="531.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+            <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica">
+              <point x="60.0" y="-103.0" />
+              <point x="260.0" y="275.0" />
+              <point x="350.0" y="275.0" />
+              <point x="-40.0" y="59.0" />
+            </edge>
+            <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro_has_patronpatologico" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro">
+              <point x="-48.0" y="-48.0" />
+              <point x="362.0" y="531.0" />
+              <point x="200.0" y="531.0" />
+              <point x="0.0" y="103.0" />
+            </edge>
+            <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historicos" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.historiaclinica">
+              <point x="0.0" y="-70.0" />
+              <point x="40.0" y="59.0" />
+            </edge>
+            <edge source="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.registro" target="1f0f5d4c-5047-44c3-820a-2349ab3ba601.TABLE:telemonitoreo.equipomedico">
+              <point x="-60.0" y="-103.0" />
+              <point x="0.0" y="125.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.3854545454545457" x="210.9790026246718" y="372.89632545931755" />
           <SelectedNodes />
           <Categories>
             <Category>Key columns</Category>
@@ -1255,25 +1279,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="81" column="41" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
+        <state relative-caret-position="357">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/HistoriaClinica.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="e#134#184#0#PHP" expanded="true" />
-            <element signature="e#591#623#1#PHP" expanded="true" />
-            <element signature="e#787#819#1#PHP" expanded="true" />
-            <element signature="e#1838#1870#1#PHP" expanded="true" />
-            <element signature="e#2658#2690#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="242" column="26" selection-start-line="242" selection-start-column="26" selection-end-line="242" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="272">
+          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+          <folding>
+            <element signature="e#134#184#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
