@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2016 a las 00:35:06
+-- Tiempo de generación: 17-10-2016 a las 16:58:53
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -33,10 +33,9 @@ CREATE TABLE `equipomedico` (
   `EM_nombre` varchar(100) NOT NULL,
   `EM_marca` varchar(100) NOT NULL,
   `EM_modelo` varchar(100) NOT NULL,
-  `EM_tipoconexion` enum('SINCRONA','ASINCRONA') NOT NULL,
-  `EM_ip` varchar(50) NOT NULL,
-  `EM_moduloconexion` varchar(100) DEFAULT NULL,
-  `EM_conexion` varchar(100) DEFAULT NULL
+  `EM_tipoconexion` varchar(50) NOT NULL,
+  `EM_ip` varchar(100) NOT NULL,
+  `EM_moduloconexion` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -51,6 +50,13 @@ CREATE TABLE `historiaclinica` (
   `HC_nombrepaciente` varchar(100) NOT NULL,
   `HC_cedulapaciente` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `historiaclinica`
+--
+
+INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedulapaciente`) VALUES
+(1, '1234564', 'luis rodriguez', '24995059');
 
 -- --------------------------------------------------------
 
@@ -188,7 +194,7 @@ ALTER TABLE `equipomedico`
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
 ALTER TABLE `historiaclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `historicos`
 --
