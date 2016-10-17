@@ -10,3 +10,7 @@ app:
 app_bundle:
     resource: "@AppBundle/Resources/config/persona.yml"
     prefix: /
+
+telemonitoreo_historiaclinica:
+    resource: "@TelemonitoreoBundle/Resources/config/historiaclinica.yml"
+    prefix: /

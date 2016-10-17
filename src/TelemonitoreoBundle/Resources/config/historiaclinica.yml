@@ -1,0 +1,3 @@
+historiaclinica_index:
+    path: /historiaclinica
+    defaults: { _controller: "TelemonitoreoBundle:HistoriaClinica:getAll"}
