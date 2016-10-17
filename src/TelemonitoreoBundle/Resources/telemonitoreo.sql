@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2016 a las 17:36:55
+-- Tiempo de generación: 17-10-2016 a las 19:16:49
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -46,7 +46,8 @@ CREATE TABLE `equipomedico` (
 INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`) VALUES
 (1, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '4123'),
 (2, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
-(3, NULL, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125');
+(3, NULL, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
+(4, 1, 'cardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321');
 
 -- --------------------------------------------------------
 
@@ -85,15 +86,23 @@ CREATE TABLE `historicos` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `patron patologico`
+-- Estructura de tabla para la tabla `patronpatologico`
 --
 
-CREATE TABLE `patron patologico` (
+CREATE TABLE `patronpatologico` (
   `id` int(11) NOT NULL,
   `PP_descripcion` varchar(500) NOT NULL,
   `PP_variables` varchar(100) NOT NULL,
-  `PP_tipoequipo` int(11) DEFAULT NULL
+  `PP_tipoequipo` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='irregularidad en las variables medicas';
+
+--
+-- Volcado de datos para la tabla `patronpatologico`
+--
+
+INSERT INTO `patronpatologico` (`id`, `PP_descripcion`, `PP_variables`, `PP_tipoequipo`) VALUES
+(1, 'ejemplo de patron patologico', '10-60', 'estetoscopio'),
+(2, 'ejemplo de patron 2', '10-60, 20-60', 'estetoscopio');
 
 -- --------------------------------------------------------
 
@@ -162,9 +171,9 @@ ALTER TABLE `historicos`
   ADD KEY `historicos_historiaclinica_id_fk` (`HI_idhistoriaclinica`);
 
 --
--- Indices de la tabla `patron patologico`
+-- Indices de la tabla `patronpatologico`
 --
-ALTER TABLE `patron patologico`
+ALTER TABLE `patronpatologico`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -199,7 +208,7 @@ ALTER TABLE `valoresvariables`
 -- AUTO_INCREMENT de la tabla `equipomedico`
 --
 ALTER TABLE `equipomedico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
@@ -211,10 +220,10 @@ ALTER TABLE `historiaclinica`
 ALTER TABLE `historicos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT de la tabla `patron patologico`
+-- AUTO_INCREMENT de la tabla `patronpatologico`
 --
-ALTER TABLE `patron patologico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `patronpatologico`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
@@ -251,7 +260,7 @@ ALTER TABLE `registro`
 -- Filtros para la tabla `registro_has_patronpatologico`
 --
 ALTER TABLE `registro_has_patronpatologico`
-  ADD CONSTRAINT `registro_has_patronpatologico_patron patologico_id_fk` FOREIGN KEY (`RP_idpatronpatologico`) REFERENCES `patron patologico` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `registro_has_patronpatologico_patron patologico_id_fk` FOREIGN KEY (`RP_idpatronpatologico`) REFERENCES `patronpatologico` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `registro_has_patronpatologico_registro_id_fk` FOREIGN KEY (`RP_idregistro`) REFERENCES `registro` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
