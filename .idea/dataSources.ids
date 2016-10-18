@@ -9,7 +9,7 @@
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
       <schema id="1" name="telemonitoreo"/>
       <table id="2" parent="1" name="equipomedico"/>
       <table id="3" parent="1" name="historiaclinica"/>
@@ -23,7 +23,6 @@
       <column id="9" parent="2" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="10" parent="2" name="EM_idhistoriaclinica">
         <data-type>int(11)</data-type>
@@ -68,7 +67,6 @@
       <column id="21" parent="3" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="22" parent="3" name="HC_codigo">
         <mandatory>1</mandatory>
@@ -88,7 +86,6 @@
       <column id="26" parent="4" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="27" parent="4" name="HI_nombreusuario">
         <data-type>varchar(100)</data-type>
@@ -128,7 +125,6 @@
       <column id="36" parent="5" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="37" parent="5" name="PP_descripcion">
         <mandatory>1</mandatory>
@@ -148,10 +144,8 @@
       <column id="41" parent="6" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="42" parent="6" name="RE_idequipo">
-        <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
       </column>
       <column id="43" parent="6" name="RE_fecha">
@@ -204,7 +198,6 @@
       <column id="54" parent="7" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="55" parent="7" name="RP_idregistro">
         <data-type>int(11)</data-type>
@@ -248,7 +241,6 @@
       <column id="64" parent="8" name="id">
         <mandatory>1</mandatory>
         <data-type>int(11)</data-type>
-        <sequence-identity>1</sequence-identity>
       </column>
       <column id="65" parent="8" name="VV_codigo">
         <data-type>int(11)</data-type>
