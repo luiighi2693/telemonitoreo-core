@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-10-2016 a las 22:37:32
+-- Tiempo de generación: 19-10-2016 a las 06:55:58
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -44,10 +44,10 @@ CREATE TABLE `equipomedico` (
 --
 
 INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`) VALUES
-(1, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '4123'),
-(2, 1, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
-(3, NULL, 'estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
-(4, 1, 'cardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321');
+(1, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '4123'),
+(2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
+(3, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
+(4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321');
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,8 @@ CREATE TABLE `historiaclinica` (
 --
 
 INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedulapaciente`) VALUES
-(1, '1234564', 'luis rodriguez', '24995059');
+(1, '1234564', 'luis rodriguez', '24995059'),
+(2, '12345678', 'pedro', '12634564');
 
 -- --------------------------------------------------------
 
@@ -110,7 +111,9 @@ CREATE TABLE `patronpatologico` (
 
 INSERT INTO `patronpatologico` (`id`, `PP_descripcion`, `PP_variables`, `PP_tipoequipo`) VALUES
 (1, 'ejemplo de patron patologico', '10-60', 'estetoscopio'),
-(2, 'ejemplo de patron 2', '10-60, 20-60', 'estetoscopio');
+(2, 'ejemplo de patron 2', '10-60, 20-60', 'estetoscopio'),
+(3, 'ejemplo de patron', '123456', 'Estetoscopio'),
+(4, 'fkvndfkgndfkn', 'fgndfjkn', 'Electrocardiografo');
 
 -- --------------------------------------------------------
 
@@ -120,7 +123,7 @@ INSERT INTO `patronpatologico` (`id`, `PP_descripcion`, `PP_variables`, `PP_tipo
 
 CREATE TABLE `registro` (
   `id` int(11) NOT NULL,
-  `RE_idequipo` int(11) NOT NULL,
+  `RE_idequipo` int(11) DEFAULT NULL,
   `RE_fecha` date NOT NULL,
   `RE_duracion` time DEFAULT NULL,
   `RE_tipoarchivo` varchar(50) NOT NULL COMMENT 'extension del archivo',
@@ -128,6 +131,13 @@ CREATE TABLE `registro` (
   `RE_modulovisualizacion` varchar(100) DEFAULT NULL,
   `RE_idhistoriaclinica` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `registro`
+--
+
+INSERT INTO `registro` (`id`, `RE_idequipo`, `RE_fecha`, `RE_duracion`, `RE_tipoarchivo`, `RE_uriarchivo`, `RE_modulovisualizacion`, `RE_idhistoriaclinica`) VALUES
+(1, 1, '2016-10-18', '00:03:53', 'wav', '/resourses/records/record1.wav', 'modulo de visualizacion de estetoscopios', 1);
 
 -- --------------------------------------------------------
 
@@ -216,12 +226,12 @@ ALTER TABLE `valoresvariables`
 -- AUTO_INCREMENT de la tabla `equipomedico`
 --
 ALTER TABLE `equipomedico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
 ALTER TABLE `historiaclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT de la tabla `historicos`
 --
@@ -231,12 +241,12 @@ ALTER TABLE `historicos`
 -- AUTO_INCREMENT de la tabla `patronpatologico`
 --
 ALTER TABLE `patronpatologico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `registro_has_patronpatologico`
 --
@@ -262,7 +272,7 @@ ALTER TABLE `historicos`
 --
 ALTER TABLE `registro`
   ADD CONSTRAINT `registro_equipomedico_id_fk` FOREIGN KEY (`RE_idequipo`) REFERENCES `equipomedico` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `registro_historiaclinica_id_fk` FOREIGN KEY (`RE_idhistoriaclinica`) REFERENCES `historiaclinica` (`id`);
+  ADD CONSTRAINT `registro_historiaclinica_id_fk` FOREIGN KEY (`RE_idhistoriaclinica`) REFERENCES `historiaclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `registro_has_patronpatologico`
