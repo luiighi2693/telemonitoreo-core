@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2016 a las 09:19:06
+-- Tiempo de generación: 21-10-2016 a las 19:21:42
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -45,7 +45,7 @@ CREATE TABLE `equipomedico` (
 
 INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`) VALUES
 (1, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '5555'),
-(2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
+(2, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
 (3, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
 (4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321'),
 (7, NULL, 'Electrocardiografo', 'ejemplo', 'ejemplo', 'ejemplo', 'SINCRONA', 'http://6515616', 'conexion Estetoscopios v1', 'ejemplo');
@@ -82,16 +82,24 @@ CREATE TABLE `historicos` (
   `HI_nombreusuario` varchar(100) DEFAULT NULL,
   `HI_accion` varchar(100) DEFAULT NULL,
   `HI_fecha` date DEFAULT NULL,
-  `HI_idhistoriaclinica` int(11) DEFAULT NULL
+  `HI_observacionpaciente` varchar(300) DEFAULT NULL,
+  `HI_hora` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `historicos`
 --
 
-INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI_idhistoriaclinica`) VALUES
-(1, 'luighi2693', 'CREATE', '2016-10-17', 1),
-(2, 'luighi2693', 'UPDATE', '2016-10-18', 1);
+INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI_observacionpaciente`, `HI_hora`) VALUES
+(1, 'luighi2693', 'CREATE', '2016-10-17', '1', NULL),
+(2, 'luighi2693', 'UPDATE', '2016-10-18', '1', NULL),
+(3, 'luighi2693', 'CREATE', '2016-10-21', 'paciente NOMBRE CEDULA con valores ALL', NULL),
+(4, 'luighi2693', 'CREATE', '2016-10-21', 'paciente NOMBRE CEDULA con valores ALL', NULL),
+(5, 'luighi2693', 'CREATE', '2016-10-21', 'paciente NOMBRE CEDULA con valores ALL', '17:23:39'),
+(6, 'luighi2693', 'CREATE', '2016-02-10', 'paciente NOMBRE CEDULA con valores ALL', '17:37:40'),
+(7, 'luighi2693', 'CREATE', '2016-02-10', 'paciente NOMBRE CEDULA con valores ALL', '11:38:01'),
+(8, 'luighi2693', 'CREATE', '2016-10-21', 'paciente NOMBRE CEDULA con valores ALL', '11:00:00'),
+(9, 'luighi2693', 'CREATE', '2016-10-21', 'paciente NOMBRE CEDULA con valores ALL', '12:00:00');
 
 -- --------------------------------------------------------
 
@@ -202,7 +210,7 @@ ALTER TABLE `historiaclinica`
 ALTER TABLE `historicos`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `historicos_id_uindex` (`id`),
-  ADD KEY `historicos_historiaclinica_id_fk` (`HI_idhistoriaclinica`);
+  ADD KEY `historicos_historiaclinica_id_fk` (`HI_observacionpaciente`);
 
 --
 -- Indices de la tabla `parametro`
@@ -252,12 +260,12 @@ ALTER TABLE `historiaclinica`
 -- AUTO_INCREMENT de la tabla `historicos`
 --
 ALTER TABLE `historicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `parametro`
 --
 ALTER TABLE `parametro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
@@ -276,12 +284,6 @@ ALTER TABLE `variableclinica`
 --
 -- Restricciones para tablas volcadas
 --
-
---
--- Filtros para la tabla `historicos`
---
-ALTER TABLE `historicos`
-  ADD CONSTRAINT `historicos_historiaclinica_id_fk` FOREIGN KEY (`HI_idhistoriaclinica`) REFERENCES `historiaclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `registro`

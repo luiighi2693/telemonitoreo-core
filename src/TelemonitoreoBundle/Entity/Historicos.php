@@ -22,11 +22,11 @@ class Historicos
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="HI_idhistoriaclinica", type="integer")
+     * @ORM\Column(name="HI_observacionpaciente", type="string", length=300)
      */
-    private $idhistoriaclinica;
+    private $observacionPaciente;
 
     /**
      * @var string
@@ -49,6 +49,12 @@ class Historicos
      */
     private $fecha;
 
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="HI_hora", type="time")
+     */
+    private $hora;
 
     /**
      * Get id
@@ -58,30 +64,6 @@ class Historicos
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set idhistoriaclinica
-     *
-     * @param string $idhistoriaclinica
-     *
-     * @return Historicos
-     */
-    public function setIdhistoriaclinica($idhistoriaclinica)
-    {
-        $this->idhistoriaclinica = $idhistoriaclinica;
-
-        return $this;
-    }
-
-    /**
-     * Get idhistoriaclinica
-     *
-     * @return string
-     */
-    public function getIdhistoriaclinica()
-    {
-        return $this->idhistoriaclinica;
     }
 
     /**
@@ -155,5 +137,39 @@ class Historicos
     {
         return $this->fecha;
     }
+
+    /**
+     * @return string
+     */
+    public function getObservacionPaciente()
+    {
+        return $this->observacionPaciente;
+    }
+
+    /**
+     * @param string $observacionPaciente
+     */
+    public function setObservacionPaciente($observacionPaciente)
+    {
+        $this->observacionPaciente = $observacionPaciente;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getHora()
+    {
+        return $this->hora;
+    }
+
+    /**
+     * @param \DateTime $hora
+     */
+    public function setHora($hora)
+    {
+        $this->hora = $hora;
+    }
+
+
 }
 

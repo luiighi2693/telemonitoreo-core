@@ -20,7 +20,13 @@ class EquipoMedicoController extends FOSRestController{
     /**
      * @Rest\GET("/equipomedico")
      */
-    public function getAllAction(){
+    public function getAllAction(Request $request){
+        if($request->headers->get("idhistoriaclinica")!=null && $request->headers->get("idhistoriaclinica")=="all" ){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array("idhistoriaclinica" => null));
+        }
+        if($request->headers->get("idhistoriaclinica")!=null && $request->headers->get("idhistoriaclinica")!="all" ){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array("idhistoriaclinica" => $request->headers->get("idhistoriaclinica")));
+        }
         return $this->getDoctrine()->getRepository('TelemonitoreoBundle:EquipoMedico')->findAll();
     }
 
@@ -29,7 +35,6 @@ class EquipoMedicoController extends FOSRestController{
      */
     public function getEquipoMedico($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->find($id);
-//        return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array('idhistoriaclinica' => $id));
     }
 
     /**
@@ -66,6 +71,7 @@ class EquipoMedicoController extends FOSRestController{
         $ip = $request->headers->get("ip");
         $moduloConexion = $request->headers->get("moduloConexion");
         $serial = $request->headers->get("serial");
+        $idHistoriaClinica = $request->headers->get("idhistoriaclinica");
 
         $em = $this->getDoctrine()->getManager();
         $equipoMedico = $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->find($id);
@@ -96,6 +102,9 @@ class EquipoMedicoController extends FOSRestController{
             }
             if(!empty($serial)){
                 $equipoMedico->setSerial($serial);
+            }
+            if(!empty($idHistoriaClinica)){
+                $equipoMedico->setIdhistoriaclinica($idHistoriaClinica);
             }
 
             $em->flush();
