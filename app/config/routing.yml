@@ -19,7 +19,7 @@ telemonitoreo_equipomedico:
     resource: "@TelemonitoreoBundle/Resources/config/equipomedico.yml"
     prefix: /
 
-telemonitoreo_patronpatologico:
+telemonitoreo_variableclinica:
     resource: "@TelemonitoreoBundle/Resources/config/variableclinica.yml"
     prefix: /
 
@@ -30,3 +30,6 @@ telemonitoreo_historicos:
 telemonitoreo_registro:
     resource: "@TelemonitoreoBundle/Resources/config/registro.yml"
     prefix: /
+
+telemonitoreo_parametro:
+    resource: "@TelemonitoreoBundle/Resources/config/parametro.yml"

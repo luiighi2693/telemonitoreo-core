@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * PatronPatologico
  *
- * @ORM\Table(name="variableClinica")
+ * @ORM\Table(name="variableclinica")
  * @ORM\Entity(repositoryClass="TelemonitoreoBundle\Repository\VariableClinicaRepository")
  */
 class VariableClinica

@@ -1,3 +1,3 @@
-patronpatologico_index:
+variableclinica_index:
     path: /variableclinica
     defaults: { _controller: "TelemonitoreoBundle:VariableClinica:getAll"}

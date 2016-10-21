@@ -13,7 +13,6 @@ use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
-use TelemonitoreoBundle\Entity\PatronPatologico;
 use TelemonitoreoBundle\Entity\VariableClinica;
 
 class VariableClinicaController extends FOSRestController {

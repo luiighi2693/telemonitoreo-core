@@ -214,7 +214,7 @@ ALTER TABLE `registro_has_patronpatologico`
 --
 -- Indices de la tabla `valoresvariables`
 --
-ALTER TABLE `valoresvariables`
+ALTER TABLE parametro
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `valoresvariables_id_uindex` (`id`);
 
@@ -255,7 +255,7 @@ ALTER TABLE `registro_has_patronpatologico`
 --
 -- AUTO_INCREMENT de la tabla `valoresvariables`
 --
-ALTER TABLE `valoresvariables`
+ALTER TABLE parametro
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Restricciones para tablas volcadas

@@ -1,0 +1,3 @@
+parametro_index:
+  path: /parametro
+  defaults: { _controller: "TelemonitoreoBundle:Parametro:getAll"}
