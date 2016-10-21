@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" />
     </list>
     <ignored path="symfony-rest.iws" />
@@ -104,27 +105,19 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="VariableClinica.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableClinica.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="ParametroController.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="352">
-                  <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+                <state relative-caret-position="323">
+                  <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
                   <folding>
                     <element signature="e#135#185#0#PHP" expanded="true" />
-                    <element signature="e#589#620#1#PHP" expanded="true" />
-                    <element signature="e#788#819#1#PHP" expanded="true" />
-                    <element signature="e#1715#1746#1#PHP" expanded="true" />
-                    <element signature="e#2503#2534#1#PHP" expanded="true" />
+                    <element signature="e#661#692#1#PHP" expanded="true" />
+                    <element signature="e#873#904#1#PHP" expanded="true" />
+                    <element signature="e#1029#1060#1#PHP" expanded="true" />
+                    <element signature="e#1228#1259#1#PHP" expanded="true" />
+                    <element signature="e#2155#2186#1#PHP" expanded="true" />
+                    <element signature="e#2943#2974#1#PHP" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -133,8 +126,8 @@
           <file leaf-file-name="telemonitoreo.sql" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="255" column="23" selection-start-line="255" selection-start-column="23" selection-end-line="255" selection-end-column="23" />
+                <state relative-caret-position="221">
+                  <caret line="250" column="2" selection-start-line="250" selection-start-column="2" selection-end-line="250" selection-end-column="2" />
                   <folding />
                 </state>
               </provider>
@@ -513,7 +506,7 @@
       <workItem from="1476852834965" duration="167000" />
       <workItem from="1476919675832" duration="3068000" />
       <workItem from="1477006850973" duration="28000" />
-      <workItem from="1477016211003" duration="7918000" />
+      <workItem from="1477016211003" duration="12105000" />
     </task>
     <task id="LOCAL-00001" summary="generacion de bundle telemonitoreo">
       <created>1476657854399</created>
@@ -592,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477028265686</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="actualizacion de la base de datos">
+      <created>1477028409526</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1477028409526</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40866000" />
+    <option name="totallyTimeSpent" value="45053000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
@@ -612,7 +612,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29035753" sideWeight="0.4969651" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5086207" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2654388" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26977247" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -660,12 +660,12 @@
     <MESSAGE value="actualizacion de la base de datos&#10;" />
     <MESSAGE value="controlador de equipo medico" />
     <MESSAGE value="entidad y controlador de patron patolgico" />
-    <MESSAGE value="actualizacion de la base de datos" />
     <MESSAGE value="entidad y controlador de historicos y cambio en la base de datos" />
     <MESSAGE value="cambio en la base de datos" />
     <MESSAGE value="cambio en la entidad patron patologico por variable clinica" />
     <MESSAGE value="entidad parametro y controlador" />
-    <option name="LAST_COMMIT_MESSAGE" value="entidad parametro y controlador" />
+    <MESSAGE value="actualizacion de la base de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de la base de datos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -776,34 +776,29 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php</url>
-          <line>23</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php</url>
-          <line>30</line>
+          <line>36</line>
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php</url>
-          <line>37</line>
+          <line>43</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php</url>
-          <line>53</line>
+          <line>59</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php</url>
-          <line>81</line>
+          <line>87</line>
           <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="36" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1342,22 +1337,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding>
             <element signature="e#135#185#0#PHP" expanded="true" />
-            <element signature="e#589#620#1#PHP" expanded="true" />
-            <element signature="e#788#819#1#PHP" expanded="true" />
-            <element signature="e#1715#1746#1#PHP" expanded="true" />
-            <element signature="e#2503#2534#1#PHP" expanded="true" />
+            <element signature="e#661#692#1#PHP" expanded="true" />
+            <element signature="e#873#904#1#PHP" expanded="true" />
+            <element signature="e#1029#1060#1#PHP" expanded="true" />
+            <element signature="e#1228#1259#1#PHP" expanded="true" />
+            <element signature="e#2155#2186#1#PHP" expanded="true" />
+            <element signature="e#2943#2974#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="255" column="23" selection-start-line="255" selection-start-column="23" selection-end-line="255" selection-end-column="23" />
+        <state relative-caret-position="221">
+          <caret line="250" column="2" selection-start-line="250" selection-start-column="2" selection-end-line="250" selection-end-column="2" />
           <folding />
         </state>
       </provider>

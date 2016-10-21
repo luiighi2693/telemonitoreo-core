@@ -20,7 +20,13 @@ class ParametroController extends FOSRestController
     /**
      * @Rest\GET("/parametro")
      */
-    public function getAllAction(){
+    public function getAllAction(Request $request){
+        if($request->headers->get("codigo")!=null){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Parametro")->findBy(array("codigo" => $request->headers->get("codigo")));
+        }
+        if($request->headers->get("nombre")!=null){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Parametro")->findBy(array("nombre" => $request->headers->get("nombre")));
+        }
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Parametro")->findAll();
     }
 

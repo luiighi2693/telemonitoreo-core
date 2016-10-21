@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-10-2016 a las 07:38:27
+-- Tiempo de generación: 21-10-2016 a las 09:19:06
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -47,7 +47,8 @@ INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_n
 (1, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '5555'),
 (2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
 (3, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
-(4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321');
+(4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321'),
+(7, NULL, 'Electrocardiografo', 'ejemplo', 'ejemplo', 'ejemplo', 'SINCRONA', 'http://6515616', 'conexion Estetoscopios v1', 'ejemplo');
 
 -- --------------------------------------------------------
 
@@ -114,8 +115,10 @@ INSERT INTO `parametro` (`id`, `PA_nombre`, `PA_codigo`, `PA_valor`) VALUES
 (2, 'Estetoscopio', 'Equipo_Medico', 2),
 (3, 'Espirometro', 'Equipo_Medico', 3),
 (4, 'conexion Estetoscopios v1', 'Modulo_Conexion', 1),
-(5, 'conexion v2', 'Modulo_Conexion', 2),
-(6, 'visulizacion estetoscopios', 'Modulo_Visualizacion', 1);
+(5, 'conexion estetoscopios v2.0', 'Modulo_Conexion', 2),
+(6, 'visulizacion estetoscopios', 'Modulo_Visualizacion', 1),
+(9, 'aaa', 'vvvv', 4),
+(10, 'Osciloscopio', 'Equipo_Medico', 4);
 
 -- --------------------------------------------------------
 
@@ -239,7 +242,7 @@ ALTER TABLE `variableclinica`
 -- AUTO_INCREMENT de la tabla `equipomedico`
 --
 ALTER TABLE `equipomedico`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
@@ -254,7 +257,7 @@ ALTER TABLE `historicos`
 -- AUTO_INCREMENT de la tabla `parametro`
 --
 ALTER TABLE `parametro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
