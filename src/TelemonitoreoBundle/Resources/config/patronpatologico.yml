@@ -1,3 +1,0 @@
-patronpatologico_index:
-    path: /patronpatologico
-    defaults: { _controller: "TelemonitoreoBundle:PatronPatologico:getAll"}

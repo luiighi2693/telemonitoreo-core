@@ -109,7 +109,7 @@ CREATE TABLE `patronpatologico` (
 -- Volcado de datos para la tabla `patronpatologico`
 --
 
-INSERT INTO `patronpatologico` (`id`, `PP_descripcion`, `PP_variables`, `PP_tipoequipo`) VALUES
+INSERT INTO variableclinica (`id`, VC_nombre, VC_rango, VC_rangoparticular) VALUES
 (1, 'ejemplo de patron patologico', '10-60', 'estetoscopio'),
 (2, 'ejemplo de patron 2', '10-60, 20-60', 'estetoscopio'),
 (3, 'ejemplo de patron', '123456', 'Estetoscopio'),
@@ -191,7 +191,7 @@ ALTER TABLE `historicos`
 --
 -- Indices de la tabla `patronpatologico`
 --
-ALTER TABLE `patronpatologico`
+ALTER TABLE variableclinica
   ADD PRIMARY KEY (`id`);
 
 --
@@ -240,7 +240,7 @@ ALTER TABLE `historicos`
 --
 -- AUTO_INCREMENT de la tabla `patronpatologico`
 --
-ALTER TABLE `patronpatologico`
+ALTER TABLE variableclinica
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `registro`
@@ -278,7 +278,7 @@ ALTER TABLE `registro`
 -- Filtros para la tabla `registro_has_patronpatologico`
 --
 ALTER TABLE `registro_has_patronpatologico`
-  ADD CONSTRAINT `registro_has_patronpatologico_patron patologico_id_fk` FOREIGN KEY (`RP_idpatronpatologico`) REFERENCES `patronpatologico` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `registro_has_patronpatologico_patron patologico_id_fk` FOREIGN KEY (`RP_idpatronpatologico`) REFERENCES variableclinica (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `registro_has_patronpatologico_registro_id_fk` FOREIGN KEY (`RP_idregistro`) REFERENCES `registro` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
