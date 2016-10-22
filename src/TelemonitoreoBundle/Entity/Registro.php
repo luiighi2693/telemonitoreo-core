@@ -36,16 +36,16 @@ class Registro
     private $idhistoriaclinica;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="RE_fecha", type="date")
+     * @ORM\Column(name="RE_fecha", type="string", length=100)
      */
     private $fecha;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="RE_duracion", type="time")
+     * @ORM\Column(name="RE_duracion", type="string", length=50)
      */
     private $duracion;
 
@@ -130,54 +130,6 @@ class Registro
     }
 
     /**
-     * Set fecha
-     *
-     * @param \DateTime $fecha
-     *
-     * @return Registro
-     */
-    public function setFecha($fecha)
-    {
-        $this->fecha = $fecha;
-
-        return $this;
-    }
-
-    /**
-     * Get fecha
-     *
-     * @return \DateTime
-     */
-    public function getFecha()
-    {
-        return $this->fecha;
-    }
-
-    /**
-     * Set duracion
-     *
-     * @param \DateTime $duracion
-     *
-     * @return Registro
-     */
-    public function setDuracion($duracion)
-    {
-        $this->duracion = $duracion;
-
-        return $this;
-    }
-
-    /**
-     * Get duracion
-     *
-     * @return \DateTime
-     */
-    public function getDuracion()
-    {
-        return $this->duracion;
-    }
-
-    /**
      * Set tipoarchivo
      *
      * @param string $tipoarchivo
@@ -248,5 +200,39 @@ class Registro
     {
         return $this->modulovisualizacion;
     }
+
+    /**
+     * @return string
+     */
+    public function getFecha()
+    {
+        return $this->fecha;
+    }
+
+    /**
+     * @param string $fecha
+     */
+    public function setFecha($fecha)
+    {
+        $this->fecha = $fecha;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDuracion()
+    {
+        return $this->duracion;
+    }
+
+    /**
+     * @param string $duracion
+     */
+    public function setDuracion($duracion)
+    {
+        $this->duracion = $duracion;
+    }
+
+
 }
 

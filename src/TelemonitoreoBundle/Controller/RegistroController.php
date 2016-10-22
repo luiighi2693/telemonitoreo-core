@@ -20,7 +20,10 @@ class RegistroController extends FOSRestController{
     /**
      * @Rest\GET("/registro")
      */
-    public function getAllAction(){
+    public function getAllAction(Request $request){
+        if($request->headers->get("idhistoriaclinica")!=null){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Registro")->findBy(array("idhistoriaclinica" =>$request->headers->get("idhistoriaclinica")));
+        }
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Registro")->findAll();
     }
 
@@ -37,8 +40,8 @@ class RegistroController extends FOSRestController{
     public function addRegistro(Request $request){
         $data = new Registro();
         $data->setIdequipo($request->headers->get("idEquipo"));
-        $data->setfecha(new \DateTime($request->headers->get("fecha")));
-        $data->setDuracion(new \DateTime($request->headers->get("duracion")));
+        $data->setFecha($request->headers->get("fecha"));
+        $data->setDuracion($request->headers->get("duracion"));
         $data->setTipoarchivo($request->headers->get("tipoArchivo"));
         $data->setUriarchivo($request->headers->get("uriArchivo"));
         $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));

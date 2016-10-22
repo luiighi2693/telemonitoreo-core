@@ -43,18 +43,11 @@ class Historicos
     private $accion;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="HI_fecha", type="date")
+     * @ORM\Column(name="HI_fecha", type="string", length=100)
      */
     private $fecha;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="HI_hora", type="time")
-     */
-    private $hora;
 
     /**
      * Get id
@@ -115,30 +108,6 @@ class Historicos
     }
 
     /**
-     * Set fecha
-     *
-     * @param \DateTime $fecha
-     *
-     * @return Historicos
-     */
-    public function setFecha($fecha)
-    {
-        $this->fecha = $fecha;
-
-        return $this;
-    }
-
-    /**
-     * Get fecha
-     *
-     * @return \DateTime
-     */
-    public function getFecha()
-    {
-        return $this->fecha;
-    }
-
-    /**
      * @return string
      */
     public function getObservacionPaciente()
@@ -155,21 +124,19 @@ class Historicos
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
-    public function getHora()
+    public function getFecha()
     {
-        return $this->hora;
+        return $this->fecha;
     }
 
     /**
-     * @param \DateTime $hora
+     * @param string $fecha
      */
-    public function setHora($hora)
+    public function setFecha($fecha)
     {
-        $this->hora = $hora;
+        $this->fecha = $fecha;
     }
-
-
 }
 

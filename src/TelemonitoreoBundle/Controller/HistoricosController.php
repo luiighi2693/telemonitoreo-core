@@ -40,9 +40,7 @@ class HistoricosController extends FOSRestController{
         $data->setObservacionPaciente($request->headers->get("observacionpaciente"));
         $data->setNombreusuario($request->headers->get("nombreusuario"));
         $data->setAccion($request->headers->get("accion"));
-        $data->setFecha(new \DateTime("now"));
-        $data->setHora(new \DateTime($request->headers->get("hora")));
-
+        $data->setFecha($request->headers->get("fecha"));
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
         $em->flush();

@@ -104,7 +104,11 @@ class EquipoMedicoController extends FOSRestController{
                 $equipoMedico->setSerial($serial);
             }
             if(!empty($idHistoriaClinica)){
-                $equipoMedico->setIdhistoriaclinica($idHistoriaClinica);
+                if($idHistoriaClinica=="null"){
+                    $equipoMedico->setIdhistoriaclinica(null);
+                }else{
+                    $equipoMedico->setIdhistoriaclinica($idHistoriaClinica);
+                }
             }
 
             $em->flush();

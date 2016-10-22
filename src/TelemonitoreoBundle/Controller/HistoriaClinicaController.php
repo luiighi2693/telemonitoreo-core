@@ -80,7 +80,15 @@ class HistoriaClinicaController extends FOSRestController{
      */
     public function deleteHistoriaClinica($id){
         $em = $this->getDoctrine()->getManager();
+
         $historiaClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($id);
+
+        $data = $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array('idhistoriaclinica' => $historiaClinica->getId()));
+        foreach ($data as &$valor) {
+            $valor->setIdhistoriaclinica(null);
+            $em->flush();
+        }
+
         $em->remove($historiaClinica);
         $em->flush();
         return new View("deleted succefully", Response::HTTP_OK);
