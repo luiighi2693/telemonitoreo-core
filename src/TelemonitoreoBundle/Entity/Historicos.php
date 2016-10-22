@@ -50,6 +50,13 @@ class Historicos
     private $fecha;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="HI_idhistoriaclinica", type="integer")
+     */
+    private $idhistoriaclinica;
+
+    /**
      * Get id
      *
      * @return int
@@ -138,5 +145,22 @@ class Historicos
     {
         $this->fecha = $fecha;
     }
+
+    /**
+     * @return int
+     */
+    public function getIdhistoriaclinica()
+    {
+        return $this->idhistoriaclinica;
+    }
+
+    /**
+     * @param int $idhistoriaclinica
+     */
+    public function setIdhistoriaclinica($idhistoriaclinica)
+    {
+        $this->idhistoriaclinica = $idhistoriaclinica;
+    }
+
 }
 

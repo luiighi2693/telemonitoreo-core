@@ -21,7 +21,10 @@ class HistoricosController extends FOSRestController{
     /**
      * @Rest\GET("/historicos")
      */
-    public function getAllAction(){
+    public function getAllAction(Request $request){
+        if($request->headers->get("idhistoriaclinica")!=null){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("idhistoriaclinica" => $request->headers->get("idhistoriaclinica")));
+        }
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findAll();
     }
 
