@@ -33,3 +33,8 @@ telemonitoreo_registro:
 
 telemonitoreo_parametro:
     resource: "@TelemonitoreoBundle/Resources/config/parametro.yml"
+    prefix: /
+
+telemonitoreo_variablehaspaciente:
+    resource: "@TelemonitoreoBundle/Resources/config/variablehaspaciente.yml"
+    prefix: /

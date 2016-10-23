@@ -1,0 +1,3 @@
+variablehaspaciente_index:
+    path: /variablehaspaciente
+    defaults: { _controller: "TelemonitoreoBundle:VariableHasPaciente:getAll"}

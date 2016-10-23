@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-10-2016 a las 05:45:14
+-- Tiempo de generación: 23-10-2016 a las 04:47:16
 -- Versión del servidor: 10.1.16-MariaDB
 -- Versión de PHP: 5.6.24
 
@@ -46,7 +46,7 @@ CREATE TABLE `equipomedico` (
 INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`) VALUES
 (1, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '5555'),
 (2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124'),
-(3, NULL, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
+(3, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125'),
 (4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321'),
 (7, NULL, 'Electrocardiografo', 'ejemplo', 'ejemplo', 'ejemplo', 'SINCRONA', 'http://6515616', 'conexion Estetoscopios v1', 'ejemplo');
 
@@ -83,23 +83,25 @@ CREATE TABLE `historicos` (
   `HI_nombreusuario` varchar(100) DEFAULT NULL,
   `HI_accion` varchar(100) DEFAULT NULL,
   `HI_fecha` varchar(100) DEFAULT NULL,
-  `HI_observacionpaciente` varchar(300) DEFAULT NULL
+  `HI_observacionpaciente` varchar(300) DEFAULT NULL,
+  `HI_idhistoriaclinica` int(11) DEFAULT NULL,
+  `HI_cedulapaciente` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `historicos`
 --
 
-INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI_observacionpaciente`) VALUES
-(1, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', '1'),
-(2, 'luighi2693', 'UPDATE', '21/10/2016  21:12:31', '1'),
-(3, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(4, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(5, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(6, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(7, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(8, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL'),
-(9, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL');
+INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI_observacionpaciente`, `HI_idhistoriaclinica`, `HI_cedulapaciente`) VALUES
+(1, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', '1', 1, NULL),
+(2, 'luighi2693', 'UPDATE', '21/10/2016  21:12:31', '1', 1, NULL),
+(3, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', NULL, NULL),
+(4, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', NULL, NULL),
+(5, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', NULL, NULL),
+(6, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', 1, NULL),
+(7, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', NULL, NULL),
+(8, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', NULL, NULL),
+(9, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -156,10 +158,10 @@ INSERT INTO `registro` (`id`, `RE_idequipo`, `RE_fecha`, `RE_duracion`, `RE_tipo
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `registro_has_patronpatologico`
+-- Estructura de tabla para la tabla `registro_has_irregularidad`
 --
 
-CREATE TABLE `registro_has_patronpatologico` (
+CREATE TABLE `registro_has_irregularidad` (
   `id` int(11) NOT NULL,
   `RP_idregistro` int(11) DEFAULT NULL,
   `RP_idpatronpatologico` int(11) DEFAULT NULL
@@ -188,7 +190,27 @@ INSERT INTO `variableclinica` (`id`, `VC_nombre`, `VC_rango`, `VC_rangoparticula
 (7, 'var', '10-20', '20-30'),
 (10, 'var1', '1234567', '02312'),
 (11, 'var2', '1234567', '132456'),
-(12, 'var3', '1234567', '213218');
+(12, 'var3', '1234567', '213218'),
+(20, 'asdasdas', 'dasd', 'asdas');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `variable_has_paciente`
+--
+
+CREATE TABLE `variable_has_paciente` (
+  `id` int(11) NOT NULL,
+  `VP_idhistoriaclinica` int(11) DEFAULT NULL,
+  `VP_idvariableclinica` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `variable_has_paciente`
+--
+
+INSERT INTO `variable_has_paciente` (`id`, `VP_idhistoriaclinica`, `VP_idvariableclinica`) VALUES
+(11, 1, 20);
 
 --
 -- Índices para tablas volcadas
@@ -231,9 +253,9 @@ ALTER TABLE `registro`
   ADD KEY `registro_equipomedico_id_fk` (`RE_idequipo`);
 
 --
--- Indices de la tabla `registro_has_patronpatologico`
+-- Indices de la tabla `registro_has_irregularidad`
 --
-ALTER TABLE `registro_has_patronpatologico`
+ALTER TABLE `registro_has_irregularidad`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `registro_has_patronpatologico_id_uindex` (`id`),
   ADD KEY `registro_has_patronpatologico_registro_id_fk` (`RP_idregistro`),
@@ -244,6 +266,15 @@ ALTER TABLE `registro_has_patronpatologico`
 --
 ALTER TABLE `variableclinica`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `variable_has_paciente`
+--
+ALTER TABLE `variable_has_paciente`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `variable_has_paciente_id_uindex` (`id`),
+  ADD KEY `variable_has_paciente_historiaclinica_id_fk` (`VP_idhistoriaclinica`),
+  ADD KEY `variable_has_paciente_variableclinica_id_fk` (`VP_idvariableclinica`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -268,22 +299,27 @@ ALTER TABLE `historicos`
 -- AUTO_INCREMENT de la tabla `parametro`
 --
 ALTER TABLE `parametro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT de la tabla `registro`
 --
 ALTER TABLE `registro`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT de la tabla `registro_has_patronpatologico`
+-- AUTO_INCREMENT de la tabla `registro_has_irregularidad`
 --
-ALTER TABLE `registro_has_patronpatologico`
+ALTER TABLE `registro_has_irregularidad`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `variableclinica`
 --
 ALTER TABLE `variableclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+--
+-- AUTO_INCREMENT de la tabla `variable_has_paciente`
+--
+ALTER TABLE `variable_has_paciente`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Restricciones para tablas volcadas
 --
@@ -296,11 +332,18 @@ ALTER TABLE `registro`
   ADD CONSTRAINT `registro_historiaclinica_id_fk` FOREIGN KEY (`RE_idhistoriaclinica`) REFERENCES `historiaclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `registro_has_patronpatologico`
+-- Filtros para la tabla `registro_has_irregularidad`
 --
-ALTER TABLE `registro_has_patronpatologico`
+ALTER TABLE `registro_has_irregularidad`
   ADD CONSTRAINT `registro_has_patronpatologico_patron patologico_id_fk` FOREIGN KEY (`RP_idpatronpatologico`) REFERENCES `variableclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `registro_has_patronpatologico_registro_id_fk` FOREIGN KEY (`RP_idregistro`) REFERENCES `registro` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `variable_has_paciente`
+--
+ALTER TABLE `variable_has_paciente`
+  ADD CONSTRAINT `variable_has_paciente_historiaclinica_id_fk` FOREIGN KEY (`VP_idhistoriaclinica`) REFERENCES `historiaclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `variable_has_paciente_variableclinica_id_fk` FOREIGN KEY (`VP_idvariableclinica`) REFERENCES `variableclinica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

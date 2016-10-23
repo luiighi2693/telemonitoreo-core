@@ -44,7 +44,7 @@ class VariableClinicaController extends FOSRestController {
         $em->persist($data);
         $em->flush();
 
-        return new View("variable clinica added succefully", Response::HTTP_OK);
+        return $data;
     }
 
     /**
@@ -71,7 +71,13 @@ class VariableClinicaController extends FOSRestController {
             }
 
             $em->flush();
-            return new View("variable clinica Updated Successfully", Response::HTTP_OK);
+
+            $variableClinicaHasHistoriaClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableHasPaciente")->findBy(array("idVariableClinica" => $variableClinica->getId()));
+            foreach ($variableClinicaHasHistoriaClinica as &$valor) {
+                $em->remove($valor);
+                $em->flush();
+            }
+            return $variableClinica;
         }
     }
 

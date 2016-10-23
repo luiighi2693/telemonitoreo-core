@@ -57,6 +57,13 @@ class Historicos
     private $idhistoriaclinica;
 
     /**
+     * @var int
+     *
+     * @ORM\Column(name="HI_cedulapaciente", type="integer")
+     */
+    private $cedulaPaciente;
+
+    /**
      * Get id
      *
      * @return int
@@ -161,6 +168,23 @@ class Historicos
     {
         $this->idhistoriaclinica = $idhistoriaclinica;
     }
+
+    /**
+     * @return int
+     */
+    public function getCedulaPaciente()
+    {
+        return $this->cedulaPaciente;
+    }
+
+    /**
+     * @param int $cedulaPaciente
+     */
+    public function setCedulaPaciente($cedulaPaciente)
+    {
+        $this->cedulaPaciente = $cedulaPaciente;
+    }
+
 
 }
 
