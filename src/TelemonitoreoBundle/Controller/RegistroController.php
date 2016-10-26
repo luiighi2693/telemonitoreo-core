@@ -67,7 +67,7 @@ class RegistroController extends FOSRestController{
         $historico->setNombreusuario($request->headers->get("usuario"));
         $historico->setFecha($request->headers->get("fecha"));
         $historico->setAccion("DELETE");
-        $historico->setObservacionPaciente("Se ha Elminado el Registro de la fecha: ".$registro->getFecha()." modulo de visualizacion: ".$registro->getModulovisualizacion()." ubicacion: ".$registro->getUriarchivo()." con el equipo: ".$equipoMedico->getNombre().", marca: ".$equipoMedico->getMarca().", modelo: ".$equipoMedico->getModelo().", serial: ".$equipoMedico->getSerial()." y referente al paciente: ".$historiaClinica->getNombrePaciente().", cedula: ".$historiaClinica->getCedulaPaciente().", historia clinica: ".$historiaClinica->getCodigo());
+        $historico->setObservacionPaciente("Se ha Eliminado el Registro de la fecha: ".$registro->getFecha().", modulo de visualizacion: ".$registro->getModulovisualizacion().", ubicacion: ".$registro->getUriarchivo().", referente al equipo: ".$equipoMedico->getNombre().", marca: ".$equipoMedico->getMarca().", modelo: ".$equipoMedico->getModelo().", serial: ".$equipoMedico->getSerial()." y referente al paciente: ".$historiaClinica->getNombrePaciente().", cedula: ".$historiaClinica->getCedulaPaciente().", historia clinica: ".$historiaClinica->getCodigo());
         $historico->setIdhistoriaclinica($historiaClinica->getId());
         $historico->setCedulaPaciente($historiaClinica->getCedulaPaciente());
         $em->persist($historico);
