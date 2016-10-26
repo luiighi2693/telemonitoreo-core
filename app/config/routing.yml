@@ -38,3 +38,7 @@ telemonitoreo_parametro:
 telemonitoreo_variablehaspaciente:
     resource: "@TelemonitoreoBundle/Resources/config/variablehaspaciente.yml"
     prefix: /
+
+telemonitoreo_usuario:
+    resource: "@TelemonitoreoBundle/Resources/config/usuario.yml"
+    prefix: /
