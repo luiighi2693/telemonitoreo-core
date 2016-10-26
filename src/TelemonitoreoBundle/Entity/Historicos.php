@@ -24,7 +24,7 @@ class Historicos
     /**
      * @var string
      *
-     * @ORM\Column(name="HI_observacionpaciente", type="string", length=500)
+     * @ORM\Column(name="HI_observacionpaciente", type="string", length=765)
      */
     private $observacionPaciente;
 

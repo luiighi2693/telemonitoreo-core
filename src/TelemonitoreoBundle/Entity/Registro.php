@@ -45,13 +45,6 @@ class Registro
     /**
      * @var string
      *
-     * @ORM\Column(name="RE_duracion", type="string", length=50)
-     */
-    private $duracion;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="RE_tipoarchivo", type="string", length=50)
      */
     private $tipoarchivo;
@@ -216,23 +209,5 @@ class Registro
     {
         $this->fecha = $fecha;
     }
-
-    /**
-     * @return string
-     */
-    public function getDuracion()
-    {
-        return $this->duracion;
-    }
-
-    /**
-     * @param string $duracion
-     */
-    public function setDuracion($duracion)
-    {
-        $this->duracion = $duracion;
-    }
-
-
 }
 

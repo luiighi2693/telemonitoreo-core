@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="integracion del id del usuario asociado en los historicos">
+    <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
     </list>
     <ignored path="symfony-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,6 +44,34 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - telemonitoreo@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="registro" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - telemonitoreo@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="historicos" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -61,11 +92,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Registro.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HistoriaClinicaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+            <state relative-caret-position="390">
+              <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
               <folding>
                 <element signature="e#6#89#0#PHP" expanded="true" />
                 <element signature="e#134#184#0#PHP" expanded="true" />
@@ -75,15 +116,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EquipoMedicoController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EquipoMedicoController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="70" column="58" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
+            <state relative-caret-position="459">
+              <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
               <folding>
                 <element signature="e#4522#4559#1#PHP" expanded="true" />
                 <element signature="e#5161#5198#1#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RegistroController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+              <folding>
+                <element signature="e#2104#2134#1#PHP" expanded="true" />
+                <element signature="e#2211#2248#1#PHP" expanded="true" />
+                <element signature="e#2352#2386#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telemonitoreo.registro" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.registro">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -118,16 +188,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telemonitoreo.historicos" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="Historicos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -170,12 +235,8 @@
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/parametro.yml" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/ParametroController.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
         <option value="$PROJECT_DIR$/web/app_dev.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasPaciente.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/variablehaspaciente.yml" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php" />
@@ -184,7 +245,11 @@
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/usuario.yml" />
         <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/UsuarioController.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
       </list>
     </option>
   </component>
@@ -300,198 +365,7 @@
     </navigator>
     <panes>
       <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Repository" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Entity" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TelemonitoreoBundle" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controller" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bin" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="symfony-rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="telemonitoreo-core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+        <subPane />
       </pane>
       <pane id="Scratches" />
       <pane id="Scope" />
@@ -502,7 +376,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="settings.github" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;histori&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php&#10;equipome&#9;FILE&#9;file://C:/sources/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;rout&#9;FILE&#9;file://C:/sources/htdocs/telemonitoreo-core/app/config/routing.yml&#10;historiacl&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php&#10;equipom&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;variable&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/app/config/routing.yml&#10;variab&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/VariableClinicaController.php&#10;REGISTRP&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/Registro.php&#10;his&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/HistoriaClinica.php&#10;histor&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/HistoricosController.php&#10;historicos&#9;null&#9;null&#10;varia&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/VariableClinicaController.php&#10;equi&#9;null&#9;null&#10;equipo&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/Registro.php&#10;parame&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/ParametroController.php&#10;patron&#9;null&#9;null&#10;reg&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/RegistroController.php&#10;equip&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;controlle&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/TelemonitoreoBundle/Controller/PatronPatologicoController.php&#10;yml&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/TelemonitoreoBundle/Resources/config/historiaclinica.yml&#10;hi&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/HistoriaClinica.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/AppBundle/Controller/UserController.php" />
+    <property name="SearchEverywhereHistoryKey" value="registro&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/RegistroController.php&#10;regis&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/Registro.php&#10;equipo&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;historia&#9;null&#9;null&#10;histori&#9;null&#9;null&#10;histor&#9;null&#9;null&#10;registr&#9;null&#9;null&#10;equipome&#9;FILE&#9;file://C:/sources/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;rout&#9;FILE&#9;file://C:/sources/htdocs/telemonitoreo-core/app/config/routing.yml&#10;historiacl&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php&#10;equipom&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;variable&#9;null&#9;null&#10;rou&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/app/config/routing.yml&#10;variab&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/VariableClinicaController.php&#10;REGISTRP&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/Registro.php&#10;his&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/HistoriaClinica.php&#10;historicos&#9;null&#9;null&#10;varia&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/VariableClinicaController.php&#10;equi&#9;null&#9;null&#10;parame&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/ParametroController.php&#10;patron&#9;null&#9;null&#10;reg&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/RegistroController.php&#10;equip&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php&#10;controlle&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/TelemonitoreoBundle/Controller/PatronPatologicoController.php&#10;yml&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/TelemonitoreoBundle/Resources/config/historiaclinica.yml&#10;hi&#9;FILE&#9;file://C:/xampp/htdocs/telemonitoreo-core/src/TelemonitoreoBundle/Entity/HistoriaClinica.php&#10;userco&#9;FILE&#9;file://C:/xampp/htdocs/symfony-rest/src/AppBundle/Controller/UserController.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -590,7 +464,7 @@
       <workItem from="1477417974998" duration="1488000" />
       <workItem from="1477493976094" duration="93000" />
       <workItem from="1477500784676" duration="2762000" />
-      <workItem from="1477517530502" duration="686000" />
+      <workItem from="1477517530502" duration="2420000" />
     </task>
     <task id="LOCAL-00001" summary="generacion de bundle telemonitoreo">
       <created>1476657854399</created>
@@ -711,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477501237856</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="historicos para vincular y eliminar equipos medicos">
+      <created>1477518264849</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1477518264849</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85675000" />
+    <option name="totallyTimeSpent" value="87409000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -723,14 +604,14 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21482602" sideWeight="0.49137932" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28802153" sideWeight="0.50582904" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2632375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2677761" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839838" sideWeight="0.4974093" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22058824" sideWeight="0.494171" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5086207" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -788,7 +669,8 @@
     <MESSAGE value="cambios en la base de datos, funcionalidad adicional en las entidades, eliminacion de relaciones directas y cambios en los formatos de campos" />
     <MESSAGE value="integracion del id del usuario asociado en los historicos" />
     <MESSAGE value="actualizacion de la base de datos con usuarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="actualizacion de la base de datos con usuarios" />
+    <MESSAGE value="historicos para vincular y eliminar equipos medicos" />
+    <option name="LAST_COMMIT_MESSAGE" value="historicos para vincular y eliminar equipos medicos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -859,12 +741,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php</url>
-          <line>33</line>
+          <line>34</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php</url>
-          <line>40</line>
+          <line>41</line>
           <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -904,7 +786,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php</url>
-          <line>23</line>
+          <line>24</line>
           <option name="timeStamp" value="43" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -926,18 +808,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.registro" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos" />
-    <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
     <entry file="dbDummy://dbtable:/e591b9be/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica" />
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1085,10 +955,429 @@
         </state>
       </provider>
     </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Historicos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" column="75" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="44" column="7" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.registro">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="55" column="21" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
+        <state relative-caret-position="390">
+          <caret line="92" column="38" selection-start-line="92" selection-start-column="38" selection-end-line="92" selection-end-column="38" />
           <folding>
             <element signature="e#6#89#0#PHP" expanded="true" />
             <element signature="e#134#184#0#PHP" expanded="true" />
@@ -1097,299 +1386,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historiaclinica">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="70" column="58" selection-start-line="70" selection-start-column="58" selection-end-line="70" selection-end-column="58" />
+        <state relative-caret-position="459">
+          <caret line="125" column="69" selection-start-line="125" selection-start-column="69" selection-end-line="125" selection-end-column="69" />
           <folding>
             <element signature="e#4522#4559#1#PHP" expanded="true" />
             <element signature="e#5161#5198#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="43" column="57" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+          <folding>
+            <element signature="e#2104#2134#1#PHP" expanded="true" />
+            <element signature="e#2211#2248#1#PHP" expanded="true" />
+            <element signature="e#2352#2386#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

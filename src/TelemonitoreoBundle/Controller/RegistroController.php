@@ -13,6 +13,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
+use TelemonitoreoBundle\Entity\Historicos;
 use TelemonitoreoBundle\Entity\Registro;
 
 class RegistroController extends FOSRestController{
@@ -41,7 +42,6 @@ class RegistroController extends FOSRestController{
         $data = new Registro();
         $data->setIdequipo($request->headers->get("idEquipo"));
         $data->setFecha($request->headers->get("fecha"));
-        $data->setDuracion($request->headers->get("duracion"));
         $data->setTipoarchivo($request->headers->get("tipoArchivo"));
         $data->setUriarchivo($request->headers->get("uriArchivo"));
         $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));
@@ -57,9 +57,22 @@ class RegistroController extends FOSRestController{
     /**
      * @Rest\DELETE("/registro/{id}")
      */
-    public function deleteRegistro($id){
+    public function deleteRegistro($id, Request $request){
         $em = $this->getDoctrine()->getManager();
         $registro = $this->getDoctrine()->getRepository("TelemonitoreoBundle:Registro")->find($id);
+        $historiaClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($registro->getIdhistoriaclinica());
+        $equipoMedico = $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->find($registro->getIdequipo());
+
+        $historico = new Historicos();
+        $historico->setNombreusuario($request->headers->get("usuario"));
+        $historico->setFecha($request->headers->get("fecha"));
+        $historico->setAccion("DELETE");
+        $historico->setObservacionPaciente("Se ha Elminado el Registro de la fecha: ".$registro->getFecha()." modulo de visualizacion: ".$registro->getModulovisualizacion()." ubicacion: ".$registro->getUriarchivo()." con el equipo: ".$equipoMedico->getNombre().", marca: ".$equipoMedico->getMarca().", modelo: ".$equipoMedico->getModelo().", serial: ".$equipoMedico->getSerial()." y referente al paciente: ".$historiaClinica->getNombrePaciente().", cedula: ".$historiaClinica->getCedulaPaciente().", historia clinica: ".$historiaClinica->getCodigo());
+        $historico->setIdhistoriaclinica($historiaClinica->getId());
+        $historico->setCedulaPaciente($historiaClinica->getCedulaPaciente());
+        $em->persist($historico);
+        $em->flush();
+
         $em->remove($registro);
         $em->flush();
         return new View("deleted succefully", Response::HTTP_OK);

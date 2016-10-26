@@ -118,7 +118,7 @@ class EquipoMedicoController extends FOSRestController{
                 }else{
                     $paciente = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($idHistoriaClinica);
                     $historico->setAccion("CREATE");
-                    $historico->setObservacionPaciente("Se ha Vinculado el equipo: ".$equipoMedico->getNombre()." ".$equipoMedico->getMarca()." ".$equipoMedico->getModelo()." ".$equipoMedico->getSerial()."   al paciente: ".$paciente->getNombrePaciente().", cedula: ".$paciente->getCedulaPaciente().", historia clinica: ".$paciente->getCodigo());
+                    $historico->setObservacionPaciente("Se ha Vinculado el equipo: ".$equipoMedico->getNombre().", marca: ".$equipoMedico->getMarca().", modelo: ".$equipoMedico->getModelo().", serial: ".$equipoMedico->getSerial()."   al paciente: ".$paciente->getNombrePaciente().", cedula: ".$paciente->getCedulaPaciente().", historia clinica: ".$paciente->getCodigo());
 
                     $equipoMedico->setIdhistoriaclinica($idHistoriaClinica);
                 }
