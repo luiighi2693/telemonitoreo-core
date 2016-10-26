@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
 use TelemonitoreoBundle\Entity\EquipoMedico;
+use TelemonitoreoBundle\Entity\Historicos;
 
 class EquipoMedicoController extends FOSRestController{
 
@@ -104,14 +105,32 @@ class EquipoMedicoController extends FOSRestController{
                 $equipoMedico->setSerial($serial);
             }
             if(!empty($idHistoriaClinica)){
+//                $historico = new Historicos();
+//                $historico->setNombreusuario($request->headers->get("usuario"));
+//                $historico->setFecha($request->headers->get("fecha"));
+
                 if($idHistoriaClinica=="null"){
+//                    $paciente = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($equipoMedico->getIdhistoriaclinica());
+//                    $historico->setAccion("DELETE");
+//                    $historico->setObservacionPaciente("Se ha Elminado el equipo: ".$equipoMedico->getNombre()." ".$equipoMedico->getMarca()." ".$equipoMedico->getModelo()." ".$equipoMedico->getSerial()."   del paciente: ".$paciente->getNombrePaciente().", cedula: ".$paciente->getCedulaPaciente().", historia clinica: ".$paciente->getCodigo());
+
                     $equipoMedico->setIdhistoriaclinica(null);
                 }else{
+//                    $paciente = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($idHistoriaClinica);
+//                    $historico->setAccion("CREATE");
+//                    $historico->setObservacionPaciente("Se ha Vinculado el equipo: ".$equipoMedico->getNombre()." ".$equipoMedico->getMarca()." ".$equipoMedico->getModelo()." ".$equipoMedico->getSerial()."   al paciente: ".$paciente->getNombrePaciente().", cedula: ".$paciente->getCedulaPaciente().", historia clinica: ".$paciente->getCodigo());
+
                     $equipoMedico->setIdhistoriaclinica($idHistoriaClinica);
                 }
+
+//                $historico->setIdhistoriaclinica($paciente->getId());
+//                $historico->setCedulaPaciente($paciente->getCedulaPaciente());
+//                $em->persist($historico);
+//                $em->flush();
             }
 
             $em->flush();
+
             return new View("equipo medico Updated Successfully", Response::HTTP_OK);
         }
     }
