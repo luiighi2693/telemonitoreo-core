@@ -14,6 +14,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
 use TelemonitoreoBundle\Entity\HistoriaClinica;
+use TelemonitoreoBundle\Entity\Historicos;
 
 class HistoriaClinicaController extends FOSRestController{
 
@@ -42,6 +43,16 @@ class HistoriaClinicaController extends FOSRestController{
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
+        $em->flush();
+
+        $historico = new Historicos();
+        $historico->setNombreusuario($request->headers->get("usuario"));
+        $historico->setAccion("CREATE");
+        $historico->setFecha($request->headers->get("fecha"));
+        $historico->setObservacionPaciente("Se ha Creado el usuario: ".$data->getNombrePaciente().", cedula: ".$data->getCedulaPaciente().", historia clinica: ".$data->getCodigo());
+        $historico->setIdhistoriaclinica($data->getId());
+        $historico->setCedulaPaciente($data->getCedulaPaciente());
+        $em->persist($historico);
         $em->flush();
 
         return new View("Historia clinica added succefully", Response::HTTP_OK);
@@ -78,7 +89,7 @@ class HistoriaClinicaController extends FOSRestController{
     /**
      * @Rest\DELETE("/historiaclinica/{id}")
      */
-    public function deleteHistoriaClinica($id){
+    public function deleteHistoriaClinica($id, Request $request){
         $em = $this->getDoctrine()->getManager();
 
         $historiaClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($id);
@@ -88,6 +99,16 @@ class HistoriaClinicaController extends FOSRestController{
             $valor->setIdhistoriaclinica(null);
             $em->flush();
         }
+
+        $historico = new Historicos();
+        $historico->setNombreusuario($request->headers->get("usuario"));
+        $historico->setAccion("DELETE");
+        $historico->setFecha($request->headers->get("fecha"));
+        $historico->setObservacionPaciente("Se ha Elminado el usuario: ".$historiaClinica->getNombrePaciente().", cedula: ".$historiaClinica->getCedulaPaciente().", historia clinica: ".$historiaClinica->getCodigo());
+        $historico->setIdhistoriaclinica($historiaClinica->getId());
+        $historico->setCedulaPaciente($historiaClinica->getCedulaPaciente());
+        $em->persist($historico);
+        $em->flush();
 
         $em->remove($historiaClinica);
         $em->flush();
