@@ -73,9 +73,8 @@ class VariableClinicaController extends FOSRestController {
             if(!empty($rango)){
                 $variableClinica->setRango($rango);
             }
-            if(!empty($rangoparticular)){
-                $variableClinica->setRangoParticular($rangoparticular);
-            }
+
+            $variableClinica->setRangoParticular($rangoparticular);
 
             $em->flush();
 
