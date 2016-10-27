@@ -23,6 +23,7 @@ class HistoricosController extends FOSRestController{
      * @return array|\TelemonitoreoBundle\Entity\Historicos[]
      */
     public function getAllAction(Request $request){
+        //para el medico
         if($request->headers->get("idhistoriaclinica")!=null){
             return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("idhistoriaclinica" => $request->headers->get("idhistoriaclinica")));
         }
@@ -32,6 +33,11 @@ class HistoricosController extends FOSRestController{
                 return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("nombreusuario" => $request->headers->get("nombreusuario"), "cedulaPaciente" => $request->headers->get("cedulapaciente")));
             }
             return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("nombreusuario" => $request->headers->get("nombreusuario")));
+        }
+
+        //para el administrador
+        if($request->headers->get("cedulapaciente")!=null && intval($request->headers->get("cedulapaciente"))!=0){
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("cedulaPaciente" => $request->headers->get("cedulapaciente")));
         }
 
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findAll();
