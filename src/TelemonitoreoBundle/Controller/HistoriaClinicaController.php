@@ -27,6 +27,8 @@ class HistoriaClinicaController extends FOSRestController{
 
     /**
      * @Rest\GET("/historiaclinica/{id}")
+     * @param $id
+     * @return null|object|HistoriaClinica
      */
     public function getHistoriaClinicaAction($id){
        return $this->getDoctrine()->getRepository("TelemonitoreoBundle:HistoriaClinica")->find($id);
@@ -34,6 +36,8 @@ class HistoriaClinicaController extends FOSRestController{
 
     /**
      * @Rest\POST("/historiaclinica/")
+     * @param Request $request
+     * @return View
      */
     public function addHistoriaClinicaAction(Request $request){
         $data = new HistoriaClinica();
@@ -60,6 +64,9 @@ class HistoriaClinicaController extends FOSRestController{
 
     /**
      * @Rest\PUT("/historiaclinica/{id}")
+     * @param $id
+     * @param Request $request
+     * @return View
      */
     public function updateHistoriaClinicaAction($id, Request $request){
         $nombre = $request->headers->get("nombre");
@@ -88,6 +95,9 @@ class HistoriaClinicaController extends FOSRestController{
 
     /**
      * @Rest\DELETE("/historiaclinica/{id}")
+     * @param $id
+     * @param Request $request
+     * @return View
      */
     public function deleteHistoriaClinica($id, Request $request){
         $em = $this->getDoctrine()->getManager();

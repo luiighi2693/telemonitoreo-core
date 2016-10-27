@@ -8,7 +8,6 @@
 
 namespace TelemonitoreoBundle\Controller;
 
-use DateTimeZone;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
@@ -20,6 +19,8 @@ class HistoricosController extends FOSRestController{
 
     /**
      * @Rest\GET("/historicos")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\Historicos[]
      */
     public function getAllAction(Request $request){
         if($request->headers->get("idhistoriaclinica")!=null){
@@ -27,7 +28,7 @@ class HistoricosController extends FOSRestController{
         }
 
         if($request->headers->get("nombreusuario")!=null){
-            if($request->headers->get("cedulapaciente")!=null){
+            if($request->headers->get("cedulapaciente")!=null && intval($request->headers->get("cedulapaciente"))!=0){
                 return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("nombreusuario" => $request->headers->get("nombreusuario"), "cedulaPaciente" => $request->headers->get("cedulapaciente")));
             }
             return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->findBy(array("nombreusuario" => $request->headers->get("nombreusuario")));
@@ -38,6 +39,8 @@ class HistoricosController extends FOSRestController{
 
     /**
      * @Rest\GET("/historicos/{id}")
+     * @param $id
+     * @return null|object|Historicos
      */
     public function getHistorico($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Historicos")->find($id);
@@ -45,6 +48,8 @@ class HistoricosController extends FOSRestController{
 
     /**
      * @Rest\POST("/historicos/")
+     * @param Request $request
+     * @return View
      */
     public function addHistorico(Request $request){
         $data = new Historicos();
@@ -89,6 +94,8 @@ class HistoricosController extends FOSRestController{
 
     /**
      * @Rest\DELETE("/historicos/{id}")
+     * @param $id
+     * @return View
      */
     public function deleteHistorico($id){
         $em = $this->getDoctrine()->getManager();

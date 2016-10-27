@@ -19,6 +19,8 @@ class ParametroController extends FOSRestController
 {
     /**
      * @Rest\GET("/parametro")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\Parametro[]
      */
     public function getAllAction(Request $request){
         if($request->headers->get("codigo")!=null){
@@ -32,6 +34,8 @@ class ParametroController extends FOSRestController
 
     /**
      * @Rest\GET("parametro/{id}")
+     * @param $id
+     * @return null|object|Parametro
      */
     public function getParametroAction($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Parametro")->find($id);
@@ -39,6 +43,8 @@ class ParametroController extends FOSRestController
 
     /**
      * @Rest\POST("/parametro/")
+     * @param Request $request
+     * @return View
      */
     public function addParametroAction(Request $request){
         $data = new Parametro();
@@ -55,6 +61,9 @@ class ParametroController extends FOSRestController
 
     /**
      * @Rest\PUT("parametro/{id}")
+     * @param $id
+     * @param Request $request
+     * @return View
      */
     public function updateParametro($id, Request $request){
         $nombre = $request->headers->get("nombre");
@@ -83,6 +92,8 @@ class ParametroController extends FOSRestController
 
     /**
      * @Rest\DELETE("/parametro/{id}")
+     * @param $id
+     * @return View
      */
     public function deleteParametro($id){
         $em = $this->getDoctrine()->getManager();

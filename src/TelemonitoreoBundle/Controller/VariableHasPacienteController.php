@@ -11,14 +11,14 @@ namespace TelemonitoreoBundle\Controller;
 use FOS\RestBundle\Controller\Annotations as Rest;
 use FOS\RestBundle\Controller\FOSRestController;
 use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use FOS\RestBundle\View\View;
 use TelemonitoreoBundle\Entity\VariableHasPaciente;
 
 class VariableHasPacienteController extends FOSRestController
 {
     /**
      * @Rest\GET("/variablehaspaciente")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\VariableHasPaciente[]
      */
     public function getAllAction(Request $request){
         if($request->headers->get("idvariableclinica")!=null){
@@ -29,6 +29,8 @@ class VariableHasPacienteController extends FOSRestController
 
     /**
      * @Rest\POST("/variablehaspaciente/")
+     * @param Request $request
+     * @return VariableHasPaciente
      */
     public function addVariableHasPacienteAction(Request $request){
         $data = new VariableHasPaciente();

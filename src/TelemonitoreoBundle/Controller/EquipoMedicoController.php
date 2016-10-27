@@ -20,6 +20,8 @@ class EquipoMedicoController extends FOSRestController{
 
     /**
      * @Rest\GET("/equipomedico")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\EquipoMedico[]
      */
     public function getAllAction(Request $request){
         if($request->headers->get("idhistoriaclinica")!=null && $request->headers->get("idhistoriaclinica")=="all" ){
@@ -33,6 +35,8 @@ class EquipoMedicoController extends FOSRestController{
 
     /**
      * @Rest\GET("/equipomedico/{id}")
+     * @param $id
+     * @return null|object|EquipoMedico
      */
     public function getEquipoMedico($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->find($id);
@@ -40,6 +44,8 @@ class EquipoMedicoController extends FOSRestController{
 
     /**
      * @Rest\POST("/equipomedico/")
+     * @param Request $request
+     * @return View
      */
     public function addEquipoMedicoAction(Request $request){
         $data = new EquipoMedico();
@@ -62,6 +68,9 @@ class EquipoMedicoController extends FOSRestController{
 
     /**
      * @Rest\PUT("/equipomedico/{id}")
+     * @param $id
+     * @param Request $request
+     * @return View
      */
     public function updateEquipoMedicoAction($id, Request $request){
         $tipoEquipo = $request->headers->get("tipoEquipo");
@@ -135,6 +144,8 @@ class EquipoMedicoController extends FOSRestController{
 
     /**
      * @Rest\DELETE("/equipomedico/{id}")
+     * @param $id
+     * @return View
      */
     public function deleteEquipoMedicoAction($id){
         $em = $this->getDoctrine()->getManager();

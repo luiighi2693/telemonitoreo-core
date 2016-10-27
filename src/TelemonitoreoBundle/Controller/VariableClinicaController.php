@@ -26,6 +26,8 @@ class VariableClinicaController extends FOSRestController {
 
     /**
      * @Rest\GET("variableclinica/{id}")
+     * @param $id
+     * @return null|object|VariableClinica
      */
     public function getVariableClinicaAction($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableClinica")->find($id);
@@ -33,6 +35,8 @@ class VariableClinicaController extends FOSRestController {
 
     /**
      * @Rest\POST("/variableclinica/")
+     * @param Request $request
+     * @return VariableClinica
      */
     public function addVariableClinicaAction(Request $request){
         $data = new VariableClinica();
@@ -49,6 +53,9 @@ class VariableClinicaController extends FOSRestController {
 
     /**
      * @Rest\PUT("variableclinica/{id}")
+     * @param $id
+     * @param Request $request
+     * @return null|object|VariableClinica
      */
     public function updateVariableClinica($id, Request $request){
         $nombre = $request->headers->get("nombre");
@@ -83,6 +90,8 @@ class VariableClinicaController extends FOSRestController {
 
     /**
      * @Rest\DELETE("/variableclinica/{id}")
+     * @param $id
+     * @return View
      */
     public function deleteVariableClinica($id){
         $em = $this->getDoctrine()->getManager();

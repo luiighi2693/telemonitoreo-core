@@ -20,6 +20,8 @@ class RegistroController extends FOSRestController{
 
     /**
      * @Rest\GET("/registro")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\Registro[]
      */
     public function getAllAction(Request $request){
         if($request->headers->get("idhistoriaclinica")!=null){
@@ -30,6 +32,8 @@ class RegistroController extends FOSRestController{
 
     /**
      * @Rest\GET("/registro/{id}")
+     * @param $id
+     * @return null|object|Registro
      */
     public function getRegistroAction($id){
         return $this->getDoctrine()->getRepository("TelemonitoreoBundle:Registro")->find($id);
@@ -37,6 +41,8 @@ class RegistroController extends FOSRestController{
 
     /**
      * @Rest\POST("/registro/")
+     * @param Request $request
+     * @return View
      */
     public function addRegistro(Request $request){
         $data = new Registro();
@@ -56,6 +62,9 @@ class RegistroController extends FOSRestController{
 
     /**
      * @Rest\DELETE("/registro/{id}")
+     * @param $id
+     * @param Request $request
+     * @return View
      */
     public function deleteRegistro($id, Request $request){
         $em = $this->getDoctrine()->getManager();

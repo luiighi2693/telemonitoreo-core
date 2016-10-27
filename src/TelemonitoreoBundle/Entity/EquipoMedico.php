@@ -301,7 +301,6 @@ class EquipoMedico
      *
      * @param string $serial
      *
-     * @return EquipoMedico
      */
    public function setSerial($serial){
        $this->serial = $serial;
