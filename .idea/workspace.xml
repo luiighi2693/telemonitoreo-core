@@ -1,27 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasEquipoController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasEquipo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/VariableHasEquipoRepository.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/config/variablehasequipo.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+    <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="cambios estructurales en la BD, integracion de relacion variable - equipos">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/symfony-rest.iml" afterPath="$PROJECT_DIR$/.idea/symfony-rest.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/symfony_requirements" afterPath="$PROJECT_DIR$/bin/symfony_requirements" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/Registro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/var/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/var/SymfonyRequirements.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
     </list>
     <ignored path="symfony-rest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -131,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="221">
-              <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+              <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
                 <element signature="e#135#185#0#PHP" expanded="true" />
@@ -143,8 +126,8 @@
       <file leaf-file-name="telemonitoreo.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="111" column="39" lean-forward="false" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -661,7 +644,7 @@
       <workItem from="1484767078907" duration="686000" />
       <workItem from="1485556905301" duration="9826000" />
       <workItem from="1486231116304" duration="2779000" />
-      <workItem from="1487293863922" duration="10838000" />
+      <workItem from="1487293863922" duration="10946000" />
     </task>
     <task id="LOCAL-00001" summary="generacion de bundle telemonitoreo">
       <created>1476657854399</created>
@@ -810,11 +793,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477536974051</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="cambios estructurales en la BD, integracion de relacion variable - equipos">
+      <created>1487306097554</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1487306097554</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120643000" />
+    <option name="totallyTimeSpent" value="120751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -894,7 +884,8 @@
     <MESSAGE value="correcciones" />
     <MESSAGE value="ajuste en el formato de mensaje de historicos" />
     <MESSAGE value="correccion de errores en la consulta de historias clinicas  (busqueda por cedulas)" />
-    <option name="LAST_COMMIT_MESSAGE" value="correccion de errores en la consulta de historias clinicas  (busqueda por cedulas)" />
+    <MESSAGE value="cambios estructurales en la BD, integracion de relacion variable - equipos" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambios estructurales en la BD, integracion de relacion variable - equipos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1477,7 +1468,7 @@
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
-          <caret line="39" column="7" lean-forward="true" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+          <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
             <element signature="e#135#185#0#PHP" expanded="true" />
@@ -1487,8 +1478,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="101" column="0" lean-forward="true" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+        <state relative-caret-position="377">
+          <caret line="111" column="39" lean-forward="false" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
           <folding />
         </state>
       </provider>
