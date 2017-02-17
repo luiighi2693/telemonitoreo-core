@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-02-2017 a las 05:33:12
+-- Tiempo de generación: 17-02-2017 a las 06:30:44
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -35,7 +35,7 @@ CREATE TABLE `equipomedico` (
   `EM_modelo` varchar(100) NOT NULL,
   `EM_tipoconexion` varchar(50) NOT NULL,
   `EM_ip` varchar(100) NOT NULL,
-  `EM_moduloconexion` varchar(100) NOT NULL,
+  `EM_modulodeteccionirregularidades` varchar(100) NOT NULL,
   `EM_serial` varchar(50) NOT NULL,
   `RE_modulovisualizacion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -44,8 +44,8 @@ CREATE TABLE `equipomedico` (
 -- Volcado de datos para la tabla `equipomedico`
 --
 
-INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_moduloconexion`, `EM_serial`, `RE_modulovisualizacion`) VALUES
-(1, 2, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'modulo de conexion de estetoscopios', '5555', ''),
+INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_nombre`, `EM_marca`, `EM_modelo`, `EM_tipoconexion`, `EM_ip`, `EM_modulodeteccionirregularidades`, `EM_serial`, `RE_modulovisualizacion`) VALUES
+(1, 2, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'conexion Estetoscopios v1', '5555', 'visulizacion estetoscopios'),
 (2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124', ''),
 (3, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125', ''),
 (4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321', '');
@@ -119,8 +119,8 @@ INSERT INTO `parametro` (`id`, `PA_nombre`, `PA_codigo`, `PA_valor`) VALUES
 (1, 'Electrocardiografo', 'Equipo_Medico', 1),
 (2, 'Estetoscopio', 'Equipo_Medico', 2),
 (3, 'Espirometro', 'Equipo_Medico', 3),
-(4, 'conexion Estetoscopios v1', 'Modulo_Conexion', 1),
-(5, 'conexion estetoscopios v2.0', 'Modulo_Conexion', 2),
+(4, 'conexion Estetoscopios v1', 'Modulo_Deteccion_Irregularidades', 1),
+(5, 'conexion estetoscopios v2.0', 'Modulo_Deteccion_Irregularidades', 2),
 (6, 'visulizacion estetoscopios', 'Modulo_Visualizacion', 1),
 (9, 'aaa', 'vvvv', 4),
 (10, 'Osciloscopio', 'Equipo_Medico', 4);

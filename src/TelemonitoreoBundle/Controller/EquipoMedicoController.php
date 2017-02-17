@@ -56,7 +56,7 @@ class EquipoMedicoController extends FOSRestController{
         $data->setModelo($request->headers->get("modelo"));
         $data->setTipoconexion($request->headers->get("tipoConexion"));
         $data->setIp($request->headers->get("ip"));
-        $data->setModuloconexion($request->headers->get("moduloConexion"));
+        $data->setModuloDeteccionIrregularidades($request->headers->get("moduloDeteccionIrregularidades"));
         $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));
         $data->setSerial($request->headers->get("serial"));
 
@@ -80,7 +80,7 @@ class EquipoMedicoController extends FOSRestController{
         $modelo = $request->headers->get("modelo");
         $tipoConexion = $request->headers->get("tipoConexion");
         $ip = $request->headers->get("ip");
-        $moduloConexion = $request->headers->get("moduloConexion");
+        $moduloDeteccionIrregularidades = $request->headers->get("moduloDeteccionIrregularidades");
         $moduloVisualizacion= $request->headers->get("moduloVisualizacion");
         $serial = $request->headers->get("serial");
         $idHistoriaClinica = $request->headers->get("idhistoriaclinica");
@@ -109,8 +109,8 @@ class EquipoMedicoController extends FOSRestController{
             if(!empty($ip)){
                 $equipoMedico->setIp($ip);
             }
-            if(!empty($moduloConexion)){
-                $equipoMedico->setModuloconexion($moduloConexion);
+            if(!empty($moduloDeteccionIrregularidades)){
+                $equipoMedico->setModuloDeteccionIrregularidades($moduloDeteccionIrregularidades);
             }
             if(!empty($moduloVisualizacion)){
                 $equipoMedico->setModulovisualizacion($moduloVisualizacion);

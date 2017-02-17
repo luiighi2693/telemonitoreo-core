@@ -73,9 +73,9 @@ class EquipoMedico
     /**
      * @var string
      *
-     * @ORM\Column(name="EM_moduloconexion", type="string", length=100)
+     * @ORM\Column(name="EM_modulodeteccionirregularidades", type="string", length=100)
      */
-    private $moduloconexion;
+    private $moduloDeteccionIrregularidades;
 
 
     /**
@@ -271,27 +271,27 @@ class EquipoMedico
     }
 
     /**
-     * Set moduloconexion
+     * Set moduloDeteccionIrregularidades
      *
-     * @param string $moduloconexion
+     * @param string $moduloDeteccionIrregularidades
      *
      * @return EquipoMedico
      */
-    public function setModuloconexion($moduloconexion)
+    public function setModuloDeteccionIrregularidades($moduloDeteccionIrregularidades)
     {
-        $this->moduloconexion = $moduloconexion;
+        $this->moduloDeteccionIrregularidades = $moduloDeteccionIrregularidades;
 
         return $this;
     }
 
     /**
-     * Get moduloconexion
+     * Get moduloDeteccionIrregularidades
      *
      * @return string
      */
-    public function getModuloconexion()
+    public function getModuloDeteccionIrregularidades()
     {
-        return $this->moduloconexion;
+        return $this->moduloDeteccionIrregularidades;
     }
 
     /**
