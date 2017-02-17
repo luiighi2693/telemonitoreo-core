@@ -59,9 +59,9 @@ class Registro
     /**
      * @var string
      *
-     * @ORM\Column(name="RE_modulovisualizacion", type="string", length=255)
+     * @ORM\Column(name="RE_data", type="string", length=500)
      */
-    private $modulovisualizacion;
+    private $data;
 
 
     /**
@@ -171,30 +171,6 @@ class Registro
     }
 
     /**
-     * Set modulovisualizacion
-     *
-     * @param string $modulovisualizacion
-     *
-     * @return Registro
-     */
-    public function setModulovisualizacion($modulovisualizacion)
-    {
-        $this->modulovisualizacion = $modulovisualizacion;
-
-        return $this;
-    }
-
-    /**
-     * Get modulovisualizacion
-     *
-     * @return string
-     */
-    public function getModulovisualizacion()
-    {
-        return $this->modulovisualizacion;
-    }
-
-    /**
      * @return string
      */
     public function getFecha()
@@ -208,6 +184,22 @@ class Registro
     public function setFecha($fecha)
     {
         $this->fecha = $fecha;
+    }
+
+    /**
+     * @return string
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
+     * @param string $data
+     */
+    public function setData($data)
+    {
+        $this->data = $data;
     }
 }
 

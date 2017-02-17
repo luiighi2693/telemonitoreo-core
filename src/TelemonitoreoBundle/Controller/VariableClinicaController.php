@@ -83,6 +83,12 @@ class VariableClinicaController extends FOSRestController {
                 $em->remove($valor);
                 $em->flush();
             }
+
+            $variableClinicaHasEquipo = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableHasEquipo")->findBy(array("idVariableClinica" => $variableClinica->getId()));
+            foreach ($variableClinicaHasEquipo as &$valor) {
+                $em->remove($valor);
+                $em->flush();
+            }
             return $variableClinica;
         }
     }

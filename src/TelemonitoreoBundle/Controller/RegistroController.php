@@ -50,8 +50,8 @@ class RegistroController extends FOSRestController{
         $data->setFecha($request->headers->get("fecha"));
         $data->setTipoarchivo($request->headers->get("tipoArchivo"));
         $data->setUriarchivo($request->headers->get("uriArchivo"));
-        $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));
         $data->setIdhistoriaclinica($request->headers->get("idHistoriaClinica"));
+        $data->setData($request->headers->get("data"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);

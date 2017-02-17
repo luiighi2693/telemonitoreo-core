@@ -86,6 +86,13 @@ class EquipoMedico
     private $serial;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="RE_modulovisualizacion", type="string", length=100)
+     */
+    private $modulovisualizacion;
+
+    /**
      * Get id
      *
      * @return int
@@ -305,5 +312,29 @@ class EquipoMedico
    public function setSerial($serial){
        $this->serial = $serial;
    }
+
+    /**
+     * Set modulovisualizacion
+     *
+     * @param string $modulovisualizacion
+     *
+     * @return EquipoMedico
+     */
+    public function setModulovisualizacion($modulovisualizacion)
+    {
+        $this->modulovisualizacion = $modulovisualizacion;
+
+        return $this;
+    }
+
+    /**
+     * Get modulovisualizacion
+     *
+     * @return string
+     */
+    public function getModulovisualizacion()
+    {
+        return $this->modulovisualizacion;
+    }
 }
 

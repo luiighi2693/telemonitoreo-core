@@ -1,0 +1,3 @@
+variablehasequipo_index:
+    path: /variablehasequipo
+    defaults: { _controller: "TelemonitoreoBundle:VariableHasEquipo:getAll"}

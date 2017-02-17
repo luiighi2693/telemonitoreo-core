@@ -57,6 +57,7 @@ class EquipoMedicoController extends FOSRestController{
         $data->setTipoconexion($request->headers->get("tipoConexion"));
         $data->setIp($request->headers->get("ip"));
         $data->setModuloconexion($request->headers->get("moduloConexion"));
+        $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));
         $data->setSerial($request->headers->get("serial"));
 
         $em = $this->getDoctrine()->getManager();
@@ -80,6 +81,7 @@ class EquipoMedicoController extends FOSRestController{
         $tipoConexion = $request->headers->get("tipoConexion");
         $ip = $request->headers->get("ip");
         $moduloConexion = $request->headers->get("moduloConexion");
+        $moduloVisualizacion= $request->headers->get("moduloVisualizacion");
         $serial = $request->headers->get("serial");
         $idHistoriaClinica = $request->headers->get("idhistoriaclinica");
 
@@ -109,6 +111,9 @@ class EquipoMedicoController extends FOSRestController{
             }
             if(!empty($moduloConexion)){
                 $equipoMedico->setModuloconexion($moduloConexion);
+            }
+            if(!empty($moduloVisualizacion)){
+                $equipoMedico->setModulovisualizacion($moduloVisualizacion);
             }
             if(!empty($serial)){
                 $equipoMedico->setSerial($serial);
