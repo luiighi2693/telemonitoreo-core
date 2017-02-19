@@ -15,6 +15,7 @@ use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\View\View;
 use TelemonitoreoBundle\Entity\HistoriaClinica;
 use TelemonitoreoBundle\Entity\Historicos;
+use TelemonitoreoBundle\Entity\UsuarioHasPaciente;
 
 class HistoriaClinicaController extends FOSRestController{
 
@@ -24,7 +25,14 @@ class HistoriaClinicaController extends FOSRestController{
      * @return array|\TelemonitoreoBundle\Entity\HistoriaClinica[]
      */
     public function getAllAction(Request $request){
-        return $this->getDoctrine()->getRepository('TelemonitoreoBundle:HistoriaClinica')->findBy(array("usuario" => $request->headers->get("usuario")));
+        $usuario =$this->getDoctrine()->getRepository('TelemonitoreoBundle:Usuario')->findOneBy(array("nombre" => $request->headers->get("usuario")));
+        $pacientesAsociados = $this->getDoctrine()->getRepository('TelemonitoreoBundle:UsuarioHasPaciente')->findBy(array("idUsuario" => $usuario->getId()));
+
+        $arreglo = array();
+        foreach ($pacientesAsociados as &$valor) {
+            array_push($arreglo, $this->getDoctrine()->getRepository('TelemonitoreoBundle:HistoriaClinica')->findOneBy(array("id" => $valor->getIdHistoriaClinica())));
+        }
+        return $arreglo;
     }
 
     /**
@@ -46,10 +54,16 @@ class HistoriaClinicaController extends FOSRestController{
         $data->setCodigo($request->headers->get("codigo"));
         $data->setCedulaPaciente($request->headers->get("cedula"));
         $data->setNombrePaciente($request->headers->get("nombre"));
-        $data->setUsuario($request->headers->get("usuario"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
+        $em->flush();
+
+        $usuario = $this->getDoctrine()->getRepository('TelemonitoreoBundle:Usuario')->findOneBy(array("nombre" => $request->headers->get("usuario")));
+        $usuarioAsociadoPaciente = new UsuarioHasPaciente();
+        $usuarioAsociadoPaciente->setIdUsuario($usuario->getId());
+        $usuarioAsociadoPaciente->setIdHistoriaClinica($data->getId());
+        $em->persist($usuarioAsociadoPaciente);
         $em->flush();
 
         $historico = new Historicos();
@@ -110,6 +124,12 @@ class HistoriaClinicaController extends FOSRestController{
         $data = $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array('idhistoriaclinica' => $historiaClinica->getId()));
         foreach ($data as &$valor) {
             $valor->setIdhistoriaclinica(null);
+            $em->flush();
+        }
+
+        $pacientesAsociados = $this->getDoctrine()->getRepository('TelemonitoreoBundle:UsuarioHasPaciente')->findBy(array("idHistoriaClinica" => $historiaClinica->getId()));
+        foreach ($pacientesAsociados as &$valor) {
+            $em->remove($valor);
             $em->flush();
         }
 

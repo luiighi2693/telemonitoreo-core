@@ -1,0 +1,3 @@
+usuariohaspaciente_index:
+    path: /usuariohaspaciente
+    defaults: { _controller: "TelemonitoreoBundle:UsuarioHasPaciente:getAll"}

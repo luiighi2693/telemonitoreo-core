@@ -43,13 +43,6 @@ class HistoriaClinica
     private $cedulaPaciente;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="HC_usuario", type="string", length=50)
-     */
-    private $usuario;
-
-    /**
      * Get id
      *
      * @return int
@@ -129,22 +122,6 @@ class HistoriaClinica
     public function getCedulaPaciente()
     {
         return $this->cedulaPaciente;
-    }
-
-    /**
-     * @return string
-     */
-    public function getUsuario()
-    {
-        return $this->usuario;
-    }
-
-    /**
-     * @param string $usuario
-     */
-    public function setUsuario($usuario)
-    {
-        $this->usuario = $usuario;
     }
 }
 

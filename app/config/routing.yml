@@ -43,6 +43,10 @@ telemonitoreo_variablehasequipo:
     resource: "@TelemonitoreoBundle/Resources/config/variablehasequipo.yml"
     prefix: /
 
+telemonitoreo_usuariohaspaciente:
+    resource: "@TelemonitoreoBundle/Resources/config/usuariohaspaciente.yml"
+    prefix: /
+
 telemonitoreo_usuario:
     resource: "@TelemonitoreoBundle/Resources/config/usuario.yml"
     prefix: /
