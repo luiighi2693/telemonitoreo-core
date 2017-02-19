@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-02-2017 a las 06:30:44
+-- Tiempo de generación: 19-02-2017 a las 18:31:37
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -48,7 +48,7 @@ INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_n
 (1, 2, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'conexion Estetoscopios v1', '5555', 'visulizacion estetoscopios'),
 (2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124', ''),
 (3, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125', ''),
-(4, 1, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321', '');
+(4, 3, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321', '');
 
 -- --------------------------------------------------------
 
@@ -60,16 +60,18 @@ CREATE TABLE `historiaclinica` (
   `id` int(11) NOT NULL,
   `HC_codigo` varchar(50) NOT NULL,
   `HC_nombrepaciente` varchar(100) NOT NULL,
-  `HC_cedulaPaciente` varchar(100) NOT NULL
+  `HC_cedulaPaciente` varchar(100) NOT NULL,
+  `HC_usuario` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `historiaclinica`
 --
 
-INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedulaPaciente`) VALUES
-(1, '1234564', 'luis rodriguez', '24995059'),
-(2, '12345678', 'pedro', '12634564');
+INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedulaPaciente`, `HC_usuario`) VALUES
+(1, '1234564', 'luis rodriguez', '24995059', 'juan1234'),
+(2, '12345678', 'pedro', '12634564', 'juan1234'),
+(3, 'ERTEDF1568', 'pedro pablo', '241414155', 'juan1234');
 
 -- --------------------------------------------------------
 
@@ -96,7 +98,10 @@ INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI
 (2, 'luighi2693', 'UPDATE', '21/10/2016  21:12:31', '1', 1, 24995059),
 (6, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', 1, 24995059),
 (9, 'luighi2693', 'CREATE', '21/10/2016  21:12:31', 'paciente NOMBRE CEDULA con valores ALL', 1, 24995059),
-(13, 'luighi2693', 'CREATE', '18/1/2017  16:35:59', 'Se ha Vinculado el equipo: estetoscopio, marca: auscullete, modelo: v2, serial: 5555   al paciente: pedro, cedula: 12634564, historia clinica: 12345678', 2, 12634564);
+(13, 'luighi2693', 'CREATE', '18/1/2017  16:35:59', 'Se ha Vinculado el equipo: estetoscopio, marca: auscullete, modelo: v2, serial: 5555   al paciente: pedro, cedula: 12634564, historia clinica: 12345678', 2, 12634564),
+(14, 'juan1234', 'CREATE', '19/2/2017  13:15:11', 'Se ha Creado el usuario: pedro pablo, cedula: 241414155, historia clinica: ERTEDF1568', 3, 241414155),
+(15, 'juan1234', 'DELETE', '19/2/2017  13:21:58', 'Se ha Elminado el equipo: ECG bionet v1.1 AERFSDF152321   del paciente: luis rodriguez, cedula: 24995059, historia clinica: 1234564', 1, 24995059),
+(16, 'juan1234', 'CREATE', '19/2/2017  13:26:18', 'Se ha Vinculado el equipo: ECG, marca: bionet, modelo: v1.1, serial: AERFSDF152321   al paciente: pedro pablo, cedula: 241414155, historia clinica: ERTEDF1568', 3, 241414155);
 
 -- --------------------------------------------------------
 
@@ -149,18 +154,6 @@ INSERT INTO `registro` (`id`, `RE_idequipo`, `RE_fecha`, `RE_tipoarchivo`, `RE_u
 (1, 1, '2016-10-18', 'wav', '/resourses/records/record1.wav', 1, ''),
 (3, 1, '2016-10-21', '123', '12', 1, ''),
 (4, 1, '2016-10-18', 'wav22', '/resourses/records/record1.wav', 1, '');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `user`
---
-
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `role` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -287,12 +280,6 @@ ALTER TABLE `registro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -329,12 +316,12 @@ ALTER TABLE `equipomedico`
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
 ALTER TABLE `historiaclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `historicos`
 --
 ALTER TABLE `historicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `parametro`
 --
@@ -346,11 +333,6 @@ ALTER TABLE `parametro`
 ALTER TABLE `registro`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT de la tabla `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -359,7 +341,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `variableclinica`
 --
 ALTER TABLE `variableclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `variable_has_equipo`
 --

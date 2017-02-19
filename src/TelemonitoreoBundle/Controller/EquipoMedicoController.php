@@ -25,7 +25,7 @@ class EquipoMedicoController extends FOSRestController{
      */
     public function getAllAction(Request $request){
         if($request->headers->get("idhistoriaclinica")!=null && $request->headers->get("idhistoriaclinica")=="all" ){
-            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array("idhistoriaclinica" => null));
+            return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array("idhistoriaclinica" => 0));
         }
         if($request->headers->get("idhistoriaclinica")!=null && $request->headers->get("idhistoriaclinica")!="all" ){
             return $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->findBy(array("idhistoriaclinica" => $request->headers->get("idhistoriaclinica")));

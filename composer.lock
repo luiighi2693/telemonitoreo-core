@@ -780,12 +780,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "5cfa770dee09d92172bc5b217805bd832690bf55"
+                "reference": "6edf1ee84a1cf263c5b7e22d5b448ab6e25f728f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/5cfa770dee09d92172bc5b217805bd832690bf55",
-                "reference": "5cfa770dee09d92172bc5b217805bd832690bf55",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/6edf1ee84a1cf263c5b7e22d5b448ab6e25f728f",
+                "reference": "6edf1ee84a1cf263c5b7e22d5b448ab6e25f728f",
                 "shasum": ""
             },
             "require": {
@@ -873,7 +873,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2017-01-27 16:53:09"
+            "time": "2017-02-17 21:16:43"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -1145,16 +1145,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/JMSSerializerBundle.git",
-                "reference": "d936231b5746636fdf8704e607256aa3bce9a9f2"
+                "reference": "cda77c585d89a360e5e1b9a76d673ce4692d2185"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/d936231b5746636fdf8704e607256aa3bce9a9f2",
-                "reference": "d936231b5746636fdf8704e607256aa3bce9a9f2",
+                "url": "https://api.github.com/repos/schmittjoh/JMSSerializerBundle/zipball/cda77c585d89a360e5e1b9a76d673ce4692d2185",
+                "reference": "cda77c585d89a360e5e1b9a76d673ce4692d2185",
                 "shasum": ""
             },
             "require": {
-                "jms/serializer": "^1.4",
+                "jms/serializer": "^1.5",
                 "php": ">=5.4.0",
                 "phpoption/phpoption": "^1.1.0",
                 "symfony/framework-bundle": "~2.3|~3.0"
@@ -1162,10 +1162,11 @@
             "require-dev": {
                 "doctrine/doctrine-bundle": "*",
                 "doctrine/orm": "*",
-                "phpunit/phpunit": "^4.0|^5.0",
+                "phpunit/phpunit": "^4.2|^5.0",
                 "symfony/browser-kit": "*",
                 "symfony/class-loader": "*",
                 "symfony/css-selector": "*",
+                "symfony/expression-language": "~2.6|~3.0",
                 "symfony/finder": "*",
                 "symfony/form": "*",
                 "symfony/process": "*",
@@ -1207,7 +1208,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2017-02-14 15:01:38"
+            "time": "2017-02-17 20:13:59"
         },
         {
             "name": "michelf/php-markdown",
@@ -1797,16 +1798,16 @@
         },
         {
             "name": "sensiolabs/security-checker",
-            "version": "v4.0.0",
+            "version": "v4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/security-checker.git",
-                "reference": "116027b57b568ed61b7b1c80eeb4f6ee9e8c599c"
+                "reference": "f2ce0035fc512287978510ca1740cd111d60f89f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/116027b57b568ed61b7b1c80eeb4f6ee9e8c599c",
-                "reference": "116027b57b568ed61b7b1c80eeb4f6ee9e8c599c",
+                "url": "https://api.github.com/repos/sensiolabs/security-checker/zipball/f2ce0035fc512287978510ca1740cd111d60f89f",
+                "reference": "f2ce0035fc512287978510ca1740cd111d60f89f",
                 "shasum": ""
             },
             "require": {
@@ -1837,7 +1838,7 @@
                 }
             ],
             "description": "A security checker for your composer.lock",
-            "time": "2016-09-23T18:09:57+00:00"
+            "time": "2017-02-18T17:53:25+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

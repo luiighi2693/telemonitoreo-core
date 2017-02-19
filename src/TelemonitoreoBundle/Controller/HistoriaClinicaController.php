@@ -20,9 +20,11 @@ class HistoriaClinicaController extends FOSRestController{
 
     /**
      * @Rest\GET("/historiaclinica")
+     * @param Request $request
+     * @return array|\TelemonitoreoBundle\Entity\HistoriaClinica[]
      */
-    public function getAllAction(){
-        return $this->getDoctrine()->getRepository('TelemonitoreoBundle:HistoriaClinica')->findAll();
+    public function getAllAction(Request $request){
+        return $this->getDoctrine()->getRepository('TelemonitoreoBundle:HistoriaClinica')->findBy(array("usuario" => $request->headers->get("usuario")));
     }
 
     /**
@@ -44,6 +46,7 @@ class HistoriaClinicaController extends FOSRestController{
         $data->setCodigo($request->headers->get("codigo"));
         $data->setCedulaPaciente($request->headers->get("cedula"));
         $data->setNombrePaciente($request->headers->get("nombre"));
+        $data->setUsuario($request->headers->get("usuario"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
