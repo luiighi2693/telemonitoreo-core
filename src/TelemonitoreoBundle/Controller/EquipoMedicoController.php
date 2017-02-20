@@ -49,7 +49,7 @@ class EquipoMedicoController extends FOSRestController{
      */
     public function addEquipoMedicoAction(Request $request){
         $data = new EquipoMedico();
-        $data->setIdhistoriaclinica($request->headers->get("idHistoriaClinica"));
+        $data->setIdhistoriaclinica(0);
         $data->setTipoequipo($request->headers->get("tipoEquipo"));
         $data->setNombre($request->headers->get("nombre"));
         $data->setMarca($request->headers->get("marca"));
@@ -59,6 +59,7 @@ class EquipoMedicoController extends FOSRestController{
         $data->setModuloDeteccionIrregularidades($request->headers->get("moduloDeteccionIrregularidades"));
         $data->setModulovisualizacion($request->headers->get("moduloVisualizacion"));
         $data->setSerial($request->headers->get("serial"));
+        $data->setUbicacion($request->headers->get("ubicacion"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
@@ -84,6 +85,7 @@ class EquipoMedicoController extends FOSRestController{
         $moduloVisualizacion= $request->headers->get("moduloVisualizacion");
         $serial = $request->headers->get("serial");
         $idHistoriaClinica = $request->headers->get("idhistoriaclinica");
+        $ubicacion = $request->headers->get("ubicacion");
 
         $em = $this->getDoctrine()->getManager();
         $equipoMedico = $this->getDoctrine()->getRepository("TelemonitoreoBundle:EquipoMedico")->find($id);
@@ -117,6 +119,9 @@ class EquipoMedicoController extends FOSRestController{
             }
             if(!empty($serial)){
                 $equipoMedico->setSerial($serial);
+            }
+            if(!empty($ubicacion)){
+                $equipoMedico->setUbicacion($ubicacion);
             }
             if(!empty($idHistoriaClinica)){
                 $historico = new Historicos();

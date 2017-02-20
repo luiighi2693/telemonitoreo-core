@@ -93,6 +93,13 @@ class EquipoMedico
     private $modulovisualizacion;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="EM_ubicacion", type="string", length=100)
+     */
+    private $ubicacion;
+
+    /**
      * Get id
      *
      * @return int
@@ -335,6 +342,22 @@ class EquipoMedico
     public function getModulovisualizacion()
     {
         return $this->modulovisualizacion;
+    }
+
+    /**
+     * @return string
+     */
+    public function getUbicacion()
+    {
+        return $this->ubicacion;
+    }
+
+    /**
+     * @param string $ubicacion
+     */
+    public function setUbicacion($ubicacion)
+    {
+        $this->ubicacion = $ubicacion;
     }
 }
 

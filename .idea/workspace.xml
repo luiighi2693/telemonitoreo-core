@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="abab5909-7b4b-4e75-aac8-e4588d399209" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableClinica.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableClinica.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasPaciente.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasPaciente.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" afterPath="$PROJECT_DIR$/src/TelemonitoreoBundle/Resources/telemonitoreo.sql" />
     </list>
     <ignored path="symfony-rest.iws" />
@@ -82,6 +79,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="historicos" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - telemonitoreo@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="historiaclinica" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -93,30 +104,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VariableHasPacienteController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-                <element signature="e#134#184#0#PHP" expanded="true" />
-                <element signature="e#914#955#1#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegistroController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/RegistroController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="52" column="70" lean-forward="false" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="VariableClinicaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -141,8 +128,8 @@
       <file leaf-file-name="HistoriaClinicaController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
+            <state relative-caret-position="132">
+              <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding>
                 <element signature="e#6#89#0#PHP" expanded="true" />
                 <element signature="e#134#184#0#PHP" expanded="true" />
@@ -161,8 +148,92 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="telemonitoreo.variable_has_paciente" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HistoricosController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telemonitoreo.historicos" pinned="false" current-in-tab="true">
+        <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telemonitoreo.variable_has_paciente" pinned="false" current-in-tab="false">
         <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.variable_has_paciente">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipoMedico.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="360" column="5" lean-forward="false" selection-start-line="360" selection-start-column="5" selection-end-line="360" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EquipoMedicoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+                <element signature="e#135#185#0#PHP" expanded="true" />
+                <element signature="e#874#908#1#PHP" expanded="true" />
+                <element signature="e#1135#1169#1#PHP" expanded="true" />
+                <element signature="e#1316#1350#1#PHP" expanded="true" />
+                <element signature="e#1577#1611#1#PHP" expanded="true" />
+                <element signature="e#3737#3771#1#PHP" expanded="true" />
+                <element signature="e#5393#5430#1#PHP" expanded="true" />
+                <element signature="e#6032#6069#1#PHP" expanded="true" />
+                <element signature="e#7212#7246#1#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpKernel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#236#0#PHP" expanded="false" />
+                <element signature="e#279#351#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="telemonitoreo.equipomedico" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
           <provider editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -187,31 +258,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="telemonitoreo.variableclinica" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.variableclinica">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VariableClinica.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableClinica.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="47">
-              <caret line="42" column="25" lean-forward="false" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="25" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -275,8 +321,6 @@
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasEquipoController.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1f0f5d4c-5047-44c3-820a-2349ab3ba601/console.sql" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasEquipo.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/UsuarioHasPaciente.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/UsuarioHasPacienteRepository.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/UsuarioHasPacienteController.php" />
@@ -286,8 +330,10 @@
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableHasPaciente.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/VariableClinica.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableHasPacienteController.php" />
-        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" />
         <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/VariableClinicaController.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php" />
+        <option value="$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php" />
       </list>
     </option>
   </component>
@@ -720,7 +766,7 @@
       <workItem from="1486231116304" duration="2779000" />
       <workItem from="1487293863922" duration="16725000" />
       <workItem from="1487464092218" duration="4167000" />
-      <workItem from="1487526780774" duration="9396000" />
+      <workItem from="1487526780774" duration="14131000" />
     </task>
     <task id="LOCAL-00001" summary="generacion de bundle telemonitoreo">
       <created>1476657854399</created>
@@ -904,11 +950,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487529245850</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="rango particular para cada paciente">
+      <created>1487555584510</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1487555584510</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140093000" />
+    <option name="totallyTimeSpent" value="144828000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -968,7 +1021,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="generacion de bundle telemonitoreo" />
     <MESSAGE value="primer restfull con telemonitoreo bundle" />
     <MESSAGE value="equipo medico entity" />
     <MESSAGE value="actualizacion de la base de datos&#10;" />
@@ -993,7 +1045,8 @@
     <MESSAGE value="cambio de contexto de modulo de conexion a modulo de deteccion de irregularidades" />
     <MESSAGE value="filtro de usuarios por medico tratante" />
     <MESSAGE value="filtro de usuarios por medico tratante (mejorada la relacion)" />
-    <option name="LAST_COMMIT_MESSAGE" value="filtro de usuarios por medico tratante (mejorada la relacion)" />
+    <MESSAGE value="rango particular para cada paciente" />
+    <option name="LAST_COMMIT_MESSAGE" value="rango particular para cada paciente" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1014,7 +1067,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php</url>
-          <line>75</line>
+          <line>76</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -1093,16 +1146,6 @@
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php</url>
-          <line>26</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php</url>
-          <line>27</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php</url>
           <line>52</line>
           <option name="timeStamp" value="52" />
@@ -1116,18 +1159,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="54" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/EquipoMedicoRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Repository/HistoriaClinicaRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1160,17 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="false" />
-            <element signature="e#134#184#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1333,30 +1358,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="291" column="53" lean-forward="false" selection-start-line="291" selection-start-column="53" selection-end-line="291" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1460,14 +1465,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/UsuarioHasPacienteController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
@@ -1518,9 +1515,9 @@
         <state relative-caret-position="263">
           <caret line="30" column="42" lean-forward="false" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
           <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="e#134#184#0#PHP" expanded="true" />
-            <element signature="e#914#955#1#PHP" expanded="true" />
+            <element signature="e#6#89#0#PHP" expanded="false" />
+            <element signature="e#134#184#0#PHP" expanded="false" />
+            <element signature="e#914#955#1#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1541,14 +1538,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1879">
-          <caret line="22" column="30" lean-forward="false" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.variableclinica">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1559,27 +1548,6 @@
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="131" column="31" lean-forward="false" selection-start-line="131" selection-start-column="31" selection-end-line="131" selection-end-column="31" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-            <element signature="e#134#184#0#PHP" expanded="true" />
-            <element signature="e#817#846#1#PHP" expanded="true" />
-            <element signature="e#980#1020#1#PHP" expanded="true" />
-            <element signature="e#1221#1258#1#PHP" expanded="true" />
-            <element signature="e#1582#1619#1#PHP" expanded="true" />
-            <element signature="e#2203#2232#1#PHP" expanded="true" />
-            <element signature="e#3708#3745#1#PHP" expanded="true" />
-            <element signature="e#4658#4695#1#PHP" expanded="true" />
-            <element signature="e#4762#4796#1#PHP" expanded="true" />
-            <element signature="e#5052#5092#1#PHP" expanded="true" />
-            <element signature="e#5355#5396#1#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1616,6 +1584,99 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.variable_has_paciente">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Entity/EquipoMedico.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="360" column="5" lean-forward="false" selection-start-line="360" selection-start-column="5" selection-end-line="360" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.equipomedico">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#236#0#PHP" expanded="false" />
+            <element signature="e#279#351#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/EquipoMedicoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#135#185#0#PHP" expanded="true" />
+            <element signature="e#874#908#1#PHP" expanded="true" />
+            <element signature="e#1135#1169#1#PHP" expanded="true" />
+            <element signature="e#1316#1350#1#PHP" expanded="true" />
+            <element signature="e#1577#1611#1#PHP" expanded="true" />
+            <element signature="e#3737#3771#1#PHP" expanded="true" />
+            <element signature="e#5393#5430#1#PHP" expanded="true" />
+            <element signature="e#6032#6069#1#PHP" expanded="true" />
+            <element signature="e#7212#7246#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoriaClinicaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#89#0#PHP" expanded="true" />
+            <element signature="e#134#184#0#PHP" expanded="true" />
+            <element signature="e#817#846#1#PHP" expanded="true" />
+            <element signature="e#980#1020#1#PHP" expanded="true" />
+            <element signature="e#1221#1258#1#PHP" expanded="true" />
+            <element signature="e#1582#1619#1#PHP" expanded="true" />
+            <element signature="e#2203#2232#1#PHP" expanded="true" />
+            <element signature="e#3708#3745#1#PHP" expanded="true" />
+            <element signature="e#4658#4695#1#PHP" expanded="true" />
+            <element signature="e#4762#4796#1#PHP" expanded="true" />
+            <element signature="e#5052#5092#1#PHP" expanded="true" />
+            <element signature="e#5355#5396#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TelemonitoreoBundle/Controller/HistoricosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="31" column="53" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/909cc56a/1f0f5d4c-5047-44c3-820a-2349ab3ba601/telemonitoreo.historicos">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
