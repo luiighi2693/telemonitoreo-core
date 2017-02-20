@@ -42,7 +42,6 @@ class VariableClinicaController extends FOSRestController {
         $data = new VariableClinica();
         $data->setNombre($request->headers->get("nombre"));
         $data->setRango($request->headers->get("rango"));
-        $data->setRangoParticular($request->headers->get("rangoparticular"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);
@@ -60,7 +59,6 @@ class VariableClinicaController extends FOSRestController {
     public function updateVariableClinica($id, Request $request){
         $nombre = $request->headers->get("nombre");
         $rango = $request->headers->get("rango");
-        $rangoparticular = $request->headers->get("rangoparticular");
 
         $em = $this->getDoctrine()->getManager();
         $variableClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableClinica")->find($id);
@@ -73,8 +71,6 @@ class VariableClinicaController extends FOSRestController {
             if(!empty($rango)){
                 $variableClinica->setRango($rango);
             }
-
-            $variableClinica->setRangoParticular($rangoparticular);
 
             $em->flush();
 
@@ -101,6 +97,19 @@ class VariableClinicaController extends FOSRestController {
     public function deleteVariableClinica($id){
         $em = $this->getDoctrine()->getManager();
         $variableClinica = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableClinica")->find($id);
+
+        $pacientesAsociados = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableHasPaciente")->findBy(array("idVariableClinica" => $variableClinica->getId()));
+        foreach ($pacientesAsociados as &$valor) {
+            $em->remove($valor);
+            $em->flush();
+        }
+
+        $equiposAsociados = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableHasEquipo")->findBy(array("idVariableClinica" => $variableClinica->getId()));
+        foreach ($equiposAsociados as &$valor) {
+            $em->remove($valor);
+            $em->flush();
+        }
+
         $em->remove($variableClinica);
         $em->flush();
         return new View("deleted succefully", Response::HTTP_OK);

@@ -36,6 +36,7 @@ class VariableHasPacienteController extends FOSRestController
         $data = new VariableHasPaciente();
         $data->setIdHistoriaClinica($request->headers->get("idhistoriaclinica"));
         $data->setIdVariableClinica($request->headers->get("idvariableclinica"));
+        $data->setRangoParticular($request->headers->get("rangoParticular"));
 
         $em = $this->getDoctrine()->getManager();
         $em->persist($data);

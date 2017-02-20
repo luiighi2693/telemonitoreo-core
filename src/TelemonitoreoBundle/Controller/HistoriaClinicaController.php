@@ -133,6 +133,12 @@ class HistoriaClinicaController extends FOSRestController{
             $em->flush();
         }
 
+        $pacientesAsociadosVariable = $this->getDoctrine()->getRepository("TelemonitoreoBundle:VariableHasPaciente")->findBy(array("idHistoriaClinica" => $historiaClinica->getId()));
+        foreach ($pacientesAsociadosVariable as &$valor) {
+            $em->remove($valor);
+            $em->flush();
+        }
+
         $historico = new Historicos();
         $historico->setNombreusuario($request->headers->get("usuario"));
         $historico->setAccion("DELETE");

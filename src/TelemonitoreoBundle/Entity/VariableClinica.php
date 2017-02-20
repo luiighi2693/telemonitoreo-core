@@ -36,14 +36,6 @@ class VariableClinica
     private $rango;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="VC_rangoparticular", type="string", length=50)
-     */
-    private $rangoParticular;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -84,23 +76,4 @@ class VariableClinica
     {
         $this->rango = $rango;
     }
-
-    /**
-     * @return string
-     */
-    public function getRangoParticular()
-    {
-        return $this->rangoParticular;
-    }
-
-    /**
-     * @param string $rangoParticular
-     */
-    public function setRangoParticular($rangoParticular)
-    {
-        $this->rangoParticular = $rangoParticular;
-    }
-
-
 }
-

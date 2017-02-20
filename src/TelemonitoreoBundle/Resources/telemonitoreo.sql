@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-02-2017 a las 19:33:27
+-- Tiempo de generación: 20-02-2017 a las 02:52:28
 -- Versión del servidor: 10.1.19-MariaDB
 -- Versión de PHP: 5.6.28
 
@@ -48,7 +48,7 @@ INSERT INTO `equipomedico` (`id`, `EM_idhistoriaclinica`, `EM_tipoequipo`, `EM_n
 (1, 2, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'ASINCRONA', 'http://10.1.201.10:8080', 'conexion Estetoscopios v1', '5555', 'visulizacion estetoscopios'),
 (2, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.11:8080', 'modulo de conexion de estetoscopios', '4124', ''),
 (3, 1, 'Estetoscopio', 'estetoscopio', 'auscullete', 'v2', 'SINCRONA', 'http://10.1.201.12:8080', 'modulo de conexion de estetoscopios', '4125', ''),
-(4, 3, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321', '');
+(4, 5, 'Electrocardiografo', 'ECG', 'bionet', 'v1.1', 'SINCRONA', 'http://192.168.0.1', 'modulo de conexion de electrocardiografos', 'AERFSDF152321', '');
 
 -- --------------------------------------------------------
 
@@ -70,7 +70,8 @@ CREATE TABLE `historiaclinica` (
 INSERT INTO `historiaclinica` (`id`, `HC_codigo`, `HC_nombrepaciente`, `HC_cedulaPaciente`) VALUES
 (1, '1234564', 'luis rodriguez', '24995059'),
 (2, '12345678', 'pedro', '12634564'),
-(3, 'ERTEDF1568', 'pedro pablo', '241414155');
+(3, 'ERTEDF1568', 'pedro pablo', '241414155'),
+(5, '12345678', 'test', '12345678');
 
 -- --------------------------------------------------------
 
@@ -102,7 +103,10 @@ INSERT INTO `historicos` (`id`, `HI_nombreusuario`, `HI_accion`, `HI_fecha`, `HI
 (15, 'juan1234', 'DELETE', '19/2/2017  13:21:58', 'Se ha Elminado el equipo: ECG bionet v1.1 AERFSDF152321   del paciente: luis rodriguez, cedula: 24995059, historia clinica: 1234564', 1, 24995059),
 (16, 'juan1234', 'CREATE', '19/2/2017  13:26:18', 'Se ha Vinculado el equipo: ECG, marca: bionet, modelo: v1.1, serial: AERFSDF152321   al paciente: pedro pablo, cedula: 241414155, historia clinica: ERTEDF1568', 3, 241414155),
 (17, 'juan1234', 'CREATE', '19/2/2017  14:24:13', 'Se ha Creado el usuario: prueba, cedula: 13245678, historia clinica: 12345678', 4, 13245678),
-(18, 'juan1234', 'DELETE', '19/2/2017  14:32:56', 'Se ha Elminado el usuario: prueba, cedula: 13245678, historia clinica: 12345678', 4, 13245678);
+(18, 'juan1234', 'DELETE', '19/2/2017  14:32:56', 'Se ha Elminado el usuario: prueba, cedula: 13245678, historia clinica: 12345678', 4, 13245678),
+(19, 'juan1234', 'CREATE', '19/2/2017  21:23:44', 'Se ha Creado el usuario: test, cedula: 12345678, historia clinica: 12345678', 5, 12345678),
+(20, 'juan1234', 'DELETE', '19/2/2017  21:24:18', 'Se ha Elminado el equipo: ECG bionet v1.1 AERFSDF152321   del paciente: pedro pablo, cedula: 241414155, historia clinica: ERTEDF1568', 3, 241414155),
+(21, 'juan1234', 'CREATE', '19/2/2017  21:24:31', 'Se ha Vinculado el equipo: ECG, marca: bionet, modelo: v1.1, serial: AERFSDF152321   al paciente: test, cedula: 12345678, historia clinica: 12345678', 5, 12345678);
 
 -- --------------------------------------------------------
 
@@ -197,7 +201,8 @@ INSERT INTO `usuario_has_paciente` (`id`, `UP_idhistoriaclinica`, `UP_idusuario`
 (1, 1, 1),
 (2, 1, 2),
 (3, 2, 1),
-(4, 3, 2);
+(4, 3, 2),
+(7, 5, 2);
 
 -- --------------------------------------------------------
 
@@ -222,8 +227,7 @@ INSERT INTO `variableclinica` (`id`, `VC_nombre`, `VC_rango`, `VC_rangoparticula
 (7, 'var', '10-20', '20-30'),
 (10, 'var1', '1234567', '02312'),
 (11, 'var2', '1234567', '132456'),
-(12, 'var3', '1234567', '213218'),
-(20, 'asdasdas', 'dasd', 'asdas');
+(22, 'prueba', '123456', '');
 
 -- --------------------------------------------------------
 
@@ -242,10 +246,10 @@ CREATE TABLE `variable_has_equipo` (
 --
 
 INSERT INTO `variable_has_equipo` (`id`, `VE_idvariableclinica`, `VE_idequipomedico`) VALUES
-(10, 1, 3),
-(11, 1, 1),
-(12, 1, 2),
-(13, 21, 4);
+(17, 1, 2),
+(18, 1, 1),
+(19, 1, 3),
+(23, 22, 1);
 
 -- --------------------------------------------------------
 
@@ -256,17 +260,18 @@ INSERT INTO `variable_has_equipo` (`id`, `VE_idvariableclinica`, `VE_idequipomed
 CREATE TABLE `variable_has_paciente` (
   `id` int(11) NOT NULL,
   `VP_idhistoriaclinica` int(11) NOT NULL,
-  `VP_idvariableclinica` int(11) NOT NULL
+  `VP_idvariableclinica` int(11) NOT NULL,
+  `VP_rangoparticular` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `variable_has_paciente`
 --
 
-INSERT INTO `variable_has_paciente` (`id`, `VP_idhistoriaclinica`, `VP_idvariableclinica`) VALUES
-(11, 1, 20),
-(20, 1, 1),
-(21, 2, 21);
+INSERT INTO `variable_has_paciente` (`id`, `VP_idhistoriaclinica`, `VP_idvariableclinica`, `VP_rangoparticular`) VALUES
+(24, 1, 1, '80-90'),
+(25, 3, 1, '91-99'),
+(28, 3, 22, '1-2');
 
 --
 -- Índices para tablas volcadas
@@ -346,12 +351,12 @@ ALTER TABLE `equipomedico`
 -- AUTO_INCREMENT de la tabla `historiaclinica`
 --
 ALTER TABLE `historiaclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `historicos`
 --
 ALTER TABLE `historicos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT de la tabla `parametro`
 --
@@ -371,22 +376,22 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `usuario_has_paciente`
 --
 ALTER TABLE `usuario_has_paciente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT de la tabla `variableclinica`
 --
 ALTER TABLE `variableclinica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `variable_has_equipo`
 --
 ALTER TABLE `variable_has_equipo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT de la tabla `variable_has_paciente`
 --
 ALTER TABLE `variable_has_paciente`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

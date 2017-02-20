@@ -35,6 +35,13 @@ class VariableHasPaciente
      */
     private $idHistoriaClinica;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="VP_rangoparticular", type="string", length=150)
+     */
+    private $rangoParticular;
+
 
     /**
      * Get id
@@ -92,6 +99,22 @@ class VariableHasPaciente
     public function getIdHistoriaClinica()
     {
         return $this->idHistoriaClinica;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRangoParticular()
+    {
+        return $this->rangoParticular;
+    }
+
+    /**
+     * @param string $rangoParticular
+     */
+    public function setRangoParticular($rangoParticular)
+    {
+        $this->rangoParticular = $rangoParticular;
     }
 }
 
